@@ -65,7 +65,7 @@ class _SignInScreenState extends State<SignInScreen> {
                    
                     validator: Validator.validateUserEmailAddress,
                     decoration: InputDecoration(
-                       contentPadding: EdgeInsets.fromLTRB(15, 12, 50, 12),
+                       contentPadding: const EdgeInsets.fromLTRB(15, 12, 15, 12),
 
                       hintText: StringConstant.gmailFormat,
                       hintStyle: TextStyles.regularText(color: ColorConstant.gray,fontSize: 16),
@@ -85,7 +85,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   TextFormField(
                     validator: Validator.validatePasswordAddress,
                     decoration: InputDecoration(
-                      contentPadding: EdgeInsets.fromLTRB(15, 12, 50, 12),
+                      contentPadding: const EdgeInsets.fromLTRB(15, 12, 15, 12),
                       hintText: StringConstant.passwordFormat,
                       hintStyle: TextStyles.regularText(color: ColorConstant.gray),
                       filled: true,
@@ -110,7 +110,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   InkWell(
                     onTap: () {
                       if(_formKey.currentState!.validate()){
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpAbout()));
+                        // Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpAbout()));
                       }
                     },
                     child: Container(
@@ -178,14 +178,19 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
                   const SizedBox(height: 32),
-                  Row(mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(StringConstant.donNotHaveAccount,
-                      style: TextStyles.lightText(),),
-                      Text(StringConstant.signUp,
-                      style: TextStyles.lightText(color: ColorConstant.containerColor,isUnderline: true),
-                      )
-                    ],
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpAbout()));
+                    },
+                    child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(StringConstant.donNotHaveAccount,
+                        style: TextStyles.lightText(),),
+                        Text(StringConstant.signUp,
+                        style: TextStyles.lightText(color: ColorConstant.containerColor,isUnderline: true),
+                        )
+                      ],
+                    ),
                   ),
             
                 ],

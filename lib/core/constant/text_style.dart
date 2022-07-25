@@ -92,5 +92,23 @@ class TextStyles {
     );
   }
 
+  static TextStyle normalFont =  TextStyle(
+      fontStyle: FontStyle.normal,
+      color: ColorConstant.buttonBorderColor,
+      fontWeight: FontWeight.w400,
+      fontSize: 16
+  );
+  static TextStyle tabTextFont =  TextStyle(
+      fontStyle: FontStyle.normal,
+      color: ColorConstant.buttonBorderColor,
+      fontWeight: FontWeight.w600,
+      fontSize: 16
+  );
 
+  static TextStyle headTextFont =  TextStyle(
+      fontStyle: FontStyle.normal,
+      color: ColorConstant.buttonBorderColor,
+      fontWeight: FontWeight.w500,
+      fontSize: 28
+  );
 }

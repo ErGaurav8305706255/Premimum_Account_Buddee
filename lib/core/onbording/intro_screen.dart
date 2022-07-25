@@ -5,6 +5,7 @@ import '../constant/color_constant.dart';
 import '../constant/image_constant.dart';
 import '../constant/string_constant.dart';
 import '../ui/signin/signin_screen.dart';
+import '../ui/signin/signup_about.dart';
 
 
 
@@ -22,7 +23,7 @@ class _IntroScreenState extends State<IntroScreen> {
       child: Scaffold(
         body: Stack(
           children: [
-            Container(
+            SizedBox(
               width: double.infinity,
               child: Column(
                 children: [
@@ -38,16 +39,21 @@ class _IntroScreenState extends State<IntroScreen> {
                         )),
                   ),
                   const SizedBox(height: 29),
-                  Container(
-                    height: 58,
-                    width: 311,
-                    decoration: BoxDecoration(
-                      color: ColorConstant.buttonColor,
-                      borderRadius: BorderRadius.circular(30)
-                    ),
-                    child: Center(
-                      child: Text(StringConstant.createAccount,
-                      style: TextStyles.boldText()
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpAbout()));
+                    },
+                    child: Container(
+                      height: 58,
+                      width: 311,
+                      decoration: BoxDecoration(
+                        color: ColorConstant.buttonColor,
+                        borderRadius: BorderRadius.circular(30)
+                      ),
+                      child: Center(
+                        child: Text(StringConstant.createAccount,
+                        style: TextStyles.boldText()
+                        ),
                       ),
                     ),
                   ),
