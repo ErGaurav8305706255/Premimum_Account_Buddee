@@ -7,7 +7,7 @@ class Validator{
       return 'Please enter Email id.';
     }
     if(!_hasMatched){
-      return 'Please enter valid Username.';
+      return 'Please enter valid Email.';
     }
     else {
       return null;

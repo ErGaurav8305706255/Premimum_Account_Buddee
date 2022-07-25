@@ -11,9 +11,9 @@ class WebViewScreen extends StatefulWidget {
 class _WebViewScreenState extends State<WebViewScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: SafeArea(
-        child: WebView(
+    return SafeArea(
+      child: Scaffold(
+        body: WebView(
           initialUrl: widget.url,
           javascriptMode: JavascriptMode.unrestricted,
         ),
