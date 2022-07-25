@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:premium_account_buddee/core/UI/onbording/signin/signin_screen.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 
-import '../../../constant/color_constant.dart';
-import '../../../constant/image_constant.dart';
-import '../../../constant/string_constant.dart';
+import '../constant/color_constant.dart';
+import '../constant/image_constant.dart';
+import '../constant/string_constant.dart';
+import '../ui/signin/signin_screen.dart';
+
+
 
 class IntroScreen extends StatefulWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -31,11 +33,10 @@ class _IntroScreenState extends State<IntroScreen> {
                         child: Text(
                             StringConstant.whatEver,
                             textAlign: TextAlign.center,
-                            style: TextStyle(
-                                color: ColorConstant.textColor,
-                                fontSize: 20,
-                                fontWeight: FontWeight.w500
-                        )),
+                            style: TextStyles.boldText(
+                              fontWeight: FontWeight.w500,
+                              color: ColorConstant.textColor
+                            )),
                       ),
                       SizedBox(height: 29),
                       Container(
@@ -54,7 +55,7 @@ class _IntroScreenState extends State<IntroScreen> {
                       SizedBox(height: 25),
                       InkWell(
                         onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => SignInScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context) => const SignInScreen()));
                         },
                         child: Text(StringConstant.signIn,
                           style: TextStyles.boldText(color: ColorConstant.navyBlue)),
