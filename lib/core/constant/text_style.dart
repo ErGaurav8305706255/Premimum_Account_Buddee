@@ -111,4 +111,16 @@ class TextStyles {
       fontWeight: FontWeight.w500,
       fontSize: 28
   );
+  static TextStyle starFont =  TextStyle(
+      fontStyle: FontStyle.normal,
+      color: ColorConstant.starColor,
+      fontWeight: FontWeight.w500,
+      fontSize: 12
+  );
+  static TextStyle deleteFont =  TextStyle(
+      fontStyle: FontStyle.normal,
+      color: ColorConstant.deleteColor,
+      fontWeight: FontWeight.w500,
+      fontSize: 12
+  );
 }

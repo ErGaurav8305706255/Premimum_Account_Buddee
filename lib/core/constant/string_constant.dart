@@ -27,5 +27,22 @@ class StringConstant{
   static String addHobby = "Add hobbies";
   static String search = "Search";
   static String searchForHobbies = "Search for hobbies";
+  static String badminton = "Badminton";
+  static String lookingFor = "Looking For...";
+  static String someInfo = "Some info about your hobby and what's you're looking for";
+  static String save = "SAVE";
+  static String intermediate = "Intermediate level, looking for a partner to play weekdays after work. Committed but not too serious";
+  static String addNewHobby = "+ Add New Hobby";
+  static String tookUp = "I took up surfing over lockdown, I love getting out of the city. Beginner level and looking for a friend to join me!";
+  static String youHaveChooseTwoHobby = "You have chosen two hobby";
+  static String youHaveThreeHobbies = "You have three hobbies";
+  static String photography = "Photography";
+  static String loveLandscape = "I love landscape/city photography. Would be great to meet someone to explore London and shoot together.";
+  static String surfing = "Surfing";
+  static String addPhoto = "Add Photos";
+  static String youCanSet = "You can set this photo as the main one";
+
 
 }
+
+

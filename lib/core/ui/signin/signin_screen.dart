@@ -23,13 +23,11 @@ class _SignInScreenState extends State<SignInScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        
         body: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32,vertical: 48),
             child: Form(key: _formKey,
               child: Column(
-                
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
@@ -37,9 +35,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                        child: Image.asset(ImageConstant.shape,
-                        color: ColorConstant.buttonBorderColor,
-                        ),
+                        child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)
                       ),
                       const SizedBox()
                     ],

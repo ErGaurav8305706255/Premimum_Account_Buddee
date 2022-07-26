@@ -2,14 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:premium_account_buddee/core/constant/color_constant.dart';
 import 'package:premium_account_buddee/core/constant/string_constant.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
-class AddHobbyScreen extends StatefulWidget {
-  const AddHobbyScreen({Key? key}) : super(key: key);
+
+import '../../constant/image_constant.dart';
+import 'add_hobbies_search_screen.dart';
+class AddHobbyListScreen extends StatefulWidget {
+  const AddHobbyListScreen({Key? key}) : super(key: key);
 
   @override
-  State<AddHobbyScreen> createState() => _AddHobbyScreenState();
+  State<AddHobbyListScreen> createState() => _AddHobbyListScreenState();
 }
 
-class _AddHobbyScreenState extends State<AddHobbyScreen> {
+class _AddHobbyListScreenState extends State<AddHobbyListScreen> {
 
   final List items = [
     'Astronomy', 'Birdwatching', 'Badminton', 'Camping', 'Chess', 'Dance','Drawing', 'Fitness', 'Fishing', 'Golf', 'Hoking', 'Kayaking',
@@ -31,7 +34,7 @@ class _AddHobbyScreenState extends State<AddHobbyScreen> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                          child: const Icon(Icons.arrow_back_ios_new)),
+                          child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
                       const Spacer(),
                       const SizedBox(),
                     ],
@@ -70,13 +73,18 @@ class _AddHobbyScreenState extends State<AddHobbyScreen> {
                             mainAxisExtent: 40
                         ),
                         itemBuilder: (context , index){
-                          return Container(
-                            alignment: Alignment.bottomRight,
-                            decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(10),
-                              border: Border.all(width: 1,color: ColorConstant.buttonBorderColor)
+                          return InkWell(
+                            onTap: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context) => AddHobbiesSearchScreen()));
+                            },
+                            child: Container(
+                              alignment: Alignment.bottomRight,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10),
+                                border: Border.all(width: 1,color: ColorConstant.buttonBorderColor)
+                              ),
+                              child: Center(child: Text(items[index],style: TextStyles.tabTextFont)),
                             ),
-                            child: Center(child: Text(items[index],style: TextStyles.tabTextFont)),
                           );
                         }
                     ),

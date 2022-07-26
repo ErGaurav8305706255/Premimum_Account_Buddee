@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 
 import '../../constant/color_constant.dart';
+import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
-import 'add_hobby_screen.dart';
+import 'add_hobby_list_screen.dart';
 class SignUpAbout extends StatefulWidget {
   const SignUpAbout({Key? key}) : super(key: key);
 
@@ -28,7 +29,7 @@ class _SignUpAboutState extends State<SignUpAbout> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                          child: const Icon(Icons.arrow_back_ios_new)),
+                          child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
                       const Spacer(),
                       const SizedBox(),
                     ],
@@ -121,7 +122,7 @@ class _SignUpAboutState extends State<SignUpAbout> {
 
                   const SizedBox(height: 200),
                   InkWell(onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AddHobbyScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AddHobbyListScreen()));
                   },
                     child: Container(
                       padding: const EdgeInsets.all(15),

@@ -12,6 +12,11 @@ class ColorConstant{
   static Color buttonBorderColor = const Color(0xFF192841);
   static Color navyBlue = const Color(0xFF284A7E);
   static Color textFieldBorderColor = const Color(0xFFD4D4D4);
+  static Color backIconColor = const Color(0xFFAAB2B7);
+  static Color emptyColor = const Color(0xFFE7FBFF);
+  static Color starColor = const Color(0xFF58FFC3);
+  static Color deleteColor = const Color(0xFFFF5858);
+
 }
 
 
