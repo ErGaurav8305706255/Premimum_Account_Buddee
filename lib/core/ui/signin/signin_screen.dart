@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 import 'package:premium_account_buddee/core/ui/signin/signup_about.dart';
 
+import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
@@ -175,9 +176,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   ),
                   const SizedBox(height: 32),
                   InkWell(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpAbout()));
-                    },
+                    onTap: () => Navigator.pushNamed(context, Routes.signUpAbout),
                     child: Row(mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text(StringConstant.donNotHaveAccount,

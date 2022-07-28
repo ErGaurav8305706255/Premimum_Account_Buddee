@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
 import 'all_add_hobby_screen.dart';
-import 'multi_selected_hobby.dart';
+import 'multi_selected_search_hobby.dart';
 class AddThreeHobbyScreen extends StatefulWidget {
   const AddThreeHobbyScreen({Key? key}) : super(key: key);
 
@@ -132,9 +133,7 @@ class _AddThreeHobbyScreenState extends State<AddThreeHobbyScreen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 32),
                     child: InkWell(
-                      onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => MultiSelectedHobbyScreen()));
-                      },
+                      onTap: () => Navigator.pushNamed(context, Routes.multiSelectedHobbyScreen),
                       child: Container(
                         height: 58,width: 311,
                         decoration: BoxDecoration(
@@ -154,9 +153,7 @@ class _AddThreeHobbyScreenState extends State<AddThreeHobbyScreen> {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 32),
                     child: InkWell(
-                      onTap: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => AllAddHobbyScreen()));
-                      },
+                      onTap: () => Navigator.pushNamed(context, Routes.allAddHobbyScreen),
                       child: Container(
                         height: 58,width: 311,
                         decoration: BoxDecoration(

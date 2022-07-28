@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 
+import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
@@ -121,9 +122,7 @@ class _SignUpAboutState extends State<SignUpAbout> {
                   ),
 
                   const SizedBox(height: 200),
-                  InkWell(onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AddHobbyListSearchScreen()));
-                  },
+                  InkWell(onTap: () => Navigator.pushNamed(context, Routes.addHobbyListSearchScreen),
                     child: Container(
                       padding: const EdgeInsets.all(15),
                       decoration: BoxDecoration(

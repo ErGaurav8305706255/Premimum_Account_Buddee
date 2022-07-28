@@ -5,14 +5,14 @@ import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
-class AddPhotoScreen extends StatefulWidget {
-  const AddPhotoScreen({Key? key}) : super(key: key);
+class GalleryScreen extends StatefulWidget {
+  const GalleryScreen({Key? key}) : super(key: key);
 
   @override
-  State<AddPhotoScreen> createState() => _AddPhotoScreenState();
+  State<GalleryScreen> createState() => _GalleryScreenState();
 }
 
-class _AddPhotoScreenState extends State<AddPhotoScreen> {
+class _GalleryScreenState extends State<GalleryScreen> {
 
   final List items = [
     {
@@ -46,6 +46,7 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
 
     },
   ];
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -66,7 +67,7 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
               ),
               SizedBox(height: 36),
               Text(
-                StringConstant.addPhoto,
+                  StringConstant.gallery,
                   style: TextStyles.headTextFont),
               SizedBox(height: 42),
               SizedBox(
@@ -81,15 +82,16 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
                     ),
                     itemBuilder: (context , index){
                       return Container(
-                        alignment: Alignment.bottomRight,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                                image: AssetImage(items[index]['image']),fit: BoxFit.cover
-                            )
-                        ),
-                        child: InkWell(onTap: () => Navigator.pushNamed(context, Routes.multiPhotoScreen),
-                            child: Image.asset(items[index]['title'],height: 20,width: 20,fit: BoxFit.cover,))
+                          alignment: Alignment.bottomRight,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                  image: AssetImage(items[index]['image']),fit: BoxFit.cover
+                              )
+                          ),
+                          child: InkWell(
+                              // onTap: () => Navigator.pushNamed(context, Routes.multiPhotoScreen),
+                              child: Image.asset(items[index]['title'],height: 20,width: 20,fit: BoxFit.cover,))
                       );
                     }
                 ),
@@ -104,7 +106,7 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
                   ),
                   child: Center(
                       child: Text(StringConstant.save,
-                        style: TextStyles.boldText()
+                          style: TextStyles.boldText()
                       )),
                 ),
               )

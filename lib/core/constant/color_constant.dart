@@ -16,8 +16,11 @@ class ColorConstant{
   static Color emptyColor = const Color(0xFFE7FBFF);
   static Color starColor = const Color(0xFF58FFC3);
   static Color deleteColor = const Color(0xFFFF5858);
+  static Color backGroundColor = const Color(0xFF58E5FF);
+  static Color lightBackGroundColor = const Color(0xFFDFF6FF);
 
 }
+
 
 
 

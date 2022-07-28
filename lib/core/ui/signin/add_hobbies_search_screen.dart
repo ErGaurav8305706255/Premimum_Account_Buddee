@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:premium_account_buddee/core/constant/image_constant.dart';
 
+import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
@@ -108,9 +109,7 @@ class _AddHobbiesSearchScreenState extends State<AddHobbiesSearchScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: InkWell(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => AddNewHobbiesScreen()));
-                    },
+                    onTap: () => Navigator.pushNamed(context, Routes.addNewHobbiesScreen),
                     child: Container(
                       height: 58,width: 311,
                       decoration: BoxDecoration(

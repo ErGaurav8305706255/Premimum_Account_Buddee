@@ -3,6 +3,7 @@ import 'package:premium_account_buddee/core/constant/color_constant.dart';
 import 'package:premium_account_buddee/core/constant/string_constant.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 
+import '../../../router.dart';
 import '../../constant/image_constant.dart';
 import 'add_hobbies_search_screen.dart';
 class AddHobbyListSearchScreen extends StatefulWidget {
@@ -130,18 +131,10 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
   }) {
     return InkWell(
       onTap: index == 2
-          ? () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) =>  AddHobbiesSearchScreen()),
-        );
-      }
-          : () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) =>  AddHobbyListSearchScreen()),
-        );
-      },
+          ? () => Navigator.pushNamed(context, Routes.addHobbiesSearchScreen)
+          : () =>
+        Navigator.pushNamed(context,Routes.addHobbyListSearchScreen),
+
       child: Column(
         children: [
           Container(

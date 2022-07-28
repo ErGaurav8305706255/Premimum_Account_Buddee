@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
@@ -133,7 +134,7 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                             borderRadius: BorderRadius.circular(10),
                             color: ColorConstant.containerColor,
                         ),
-                        child: Text(StringConstant.badminton,style: TextStyles.tabTextFont),
+                        child: Text(StringConstant.photography,style: TextStyles.tabTextFont),
                       ),
                     ],
                   ),
@@ -142,9 +143,7 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: InkWell(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => AddThreeHobbyScreen()));
-                    },
+                    onTap: () => Navigator.pushNamed(context, Routes.addThreeHobbyScreen),
                     child: Container(
                       height: 58,width: 311,
                       decoration: BoxDecoration(

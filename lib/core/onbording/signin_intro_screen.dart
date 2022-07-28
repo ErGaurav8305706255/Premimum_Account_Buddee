@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 
+import '../../router.dart';
 import '../constant/color_constant.dart';
 import '../constant/image_constant.dart';
 import '../constant/string_constant.dart';
@@ -9,14 +10,14 @@ import '../ui/signin/signup_about.dart';
 
 
 
-class IntroScreen extends StatefulWidget {
-  const IntroScreen({Key? key}) : super(key: key);
+class SignInIntroScreen extends StatefulWidget {
+  const SignInIntroScreen({Key? key}) : super(key: key);
 
   @override
-  State<IntroScreen> createState() => _IntroScreenState();
+  State<SignInIntroScreen> createState() => _SignInIntroScreenState();
 }
 
-class _IntroScreenState extends State<IntroScreen> {
+class _SignInIntroScreenState extends State<SignInIntroScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -40,9 +41,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   ),
                   const SizedBox(height: 29),
                   InkWell(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpAbout()));
-                    },
+                    onTap: () => Navigator.pushNamed(context, Routes.signUpAbout),
                     child: Container(
                       height: 58,
                       width: 311,
@@ -59,9 +58,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   ),
                   const SizedBox(height: 17),
                   InkWell(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SignInScreen()));
-                    },
+                   onTap: () => Navigator.pushNamed(context,  Routes.signInScreen),
                     child: Text(StringConstant.signIn,
                       style: TextStyles.boldText(color: ColorConstant.navyBlue)),
                   )

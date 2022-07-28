@@ -123,4 +123,10 @@ class TextStyles {
       fontWeight: FontWeight.w500,
       fontSize: 12
   );
+  static TextStyle menuTextFont =  TextStyle(
+      fontStyle: FontStyle.normal,
+      color: ColorConstant.buttonBorderColor,
+      fontWeight: FontWeight.w500,
+      fontSize: 20
+  );
 }

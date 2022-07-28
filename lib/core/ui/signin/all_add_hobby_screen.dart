@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
+import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
-import 'add_photo_screen.dart';
+
 class AllAddHobbyScreen extends StatefulWidget {
   const AllAddHobbyScreen({Key? key}) : super(key: key);
 
@@ -119,9 +120,7 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: InkWell(
-                    onTap: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => AddPhotoScreen()));
-                    },
+                    onTap: () => Navigator.pushNamed(context, Routes.addPhotoScreen),
                     child: Container(
                       height: 58,width: 311,
                       decoration: BoxDecoration(

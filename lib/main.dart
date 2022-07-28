@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:premium_account_buddee/router.dart';
 
-import 'core/onbording/intro_screen.dart';
-import 'core/ui/signin/search_screen.dart';
 
 
 void main() {
@@ -16,7 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: IntroScreen(),
+      onGenerateRoute: RouterApp.generateRoute,
+      initialRoute: Routes.introScreen,
     );
   }
 }

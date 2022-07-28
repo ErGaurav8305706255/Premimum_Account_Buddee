@@ -41,6 +41,18 @@ class StringConstant{
   static String surfing = "Surfing";
   static String addPhoto = "Add Photos";
   static String youCanSet = "You can set this photo as the main one";
+  static String myProfile = "My profile";
+  static String james = "James Clark";
+  static String landon = "Landon";
+  static String myHobie = "My Hobbies";
+  static String premium = "Premium";
+  static String gallery = "Gallery";
+  static String logout = "LOG UOT";
+  static String information = "Information";
+  static String hobbies = "Hobbies";
+  static String searchSettings = "Search Settings";
+  static String privacyPolicy = "Privacy Policy";
+
 
 
 }
