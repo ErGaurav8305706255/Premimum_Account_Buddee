@@ -4,7 +4,7 @@ import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
-import 'dd_photo_screen.dart';
+import 'add_photo_screen.dart';
 class AllAddHobbyScreen extends StatefulWidget {
   const AllAddHobbyScreen({Key? key}) : super(key: key);
 

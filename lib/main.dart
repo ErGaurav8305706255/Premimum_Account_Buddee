@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'core/onbording/intro_screen.dart';
+import 'core/ui/signin/search_screen.dart';
 
 
 void main() {

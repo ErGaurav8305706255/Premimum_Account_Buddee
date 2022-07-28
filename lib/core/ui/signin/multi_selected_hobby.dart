@@ -4,7 +4,6 @@ import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
-import 'add_hobbies_search_screen.dart';
 import 'add_two_hobby_screen.dart';
 class MultiSelectedHobbyScreen extends StatefulWidget {
   const MultiSelectedHobbyScreen({Key? key}) : super(key: key);
@@ -19,6 +18,8 @@ class _MultiSelectedHobbyScreenState extends State<MultiSelectedHobbyScreen> {
     'Astronomy', 'Birdwatching', 'Badminton', 'Camping', 'Chess', 'Dance','Drawing', 'Fitness', 'Fishing', 'Golf', 'Hoking', 'Kayaking',
     'Music', 'Origami', 'Photography', 'Rock Claiming', 'Surfing', 'Tennis', 'Trainspotting', 'Yoga'
   ];
+
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

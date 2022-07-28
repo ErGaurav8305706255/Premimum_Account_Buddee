@@ -4,7 +4,7 @@ import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
-import 'add_hobby_list_screen.dart';
+import 'add_hobby_list_search_screen.dart';
 import 'add_two_hobby_screen.dart';
 import 'all_add_hobby_screen.dart';
 import 'multi_selected_hobby.dart';

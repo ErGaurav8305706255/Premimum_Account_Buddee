@@ -4,7 +4,7 @@ import 'package:premium_account_buddee/core/constant/text_style.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
-import 'add_hobby_list_screen.dart';
+import 'add_hobby_list_search_screen.dart';
 class SignUpAbout extends StatefulWidget {
   const SignUpAbout({Key? key}) : super(key: key);
 
@@ -122,7 +122,7 @@ class _SignUpAboutState extends State<SignUpAbout> {
 
                   const SizedBox(height: 200),
                   InkWell(onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AddHobbyListScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const AddHobbyListSearchScreen()));
                   },
                     child: Container(
                       padding: const EdgeInsets.all(15),

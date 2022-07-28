@@ -5,19 +5,30 @@ import 'package:premium_account_buddee/core/constant/text_style.dart';
 
 import '../../constant/image_constant.dart';
 import 'add_hobbies_search_screen.dart';
-class AddHobbyListScreen extends StatefulWidget {
-  const AddHobbyListScreen({Key? key}) : super(key: key);
+class AddHobbyListSearchScreen extends StatefulWidget {
+  const AddHobbyListSearchScreen({Key? key}) : super(key: key);
 
   @override
-  State<AddHobbyListScreen> createState() => _AddHobbyListScreenState();
+  State<AddHobbyListSearchScreen> createState() => _AddHobbyListSearchScreenState();
 }
 
-class _AddHobbyListScreenState extends State<AddHobbyListScreen> {
+class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
+
+
+  final List _searchHistory = [];
+  bool isSearchEnable = false;
+  final TextEditingController _txtController = TextEditingController();
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   final List items = [
     'Astronomy', 'Birdwatching', 'Badminton', 'Camping', 'Chess', 'Dance','Drawing', 'Fitness', 'Fishing', 'Golf', 'Hoking', 'Kayaking',
     'Music', 'Origami', 'Photography', 'Rock Claiming', 'Surfing', 'Tennis', 'Trainspotting', 'Yoga'
   ];
+
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +60,7 @@ class _AddHobbyListScreenState extends State<AddHobbyListScreen> {
                   Text(StringConstant.search,style: TextStyles.normalFont,),
                   const SizedBox(height: 8),
                   TextFormField(
+                    controller: _txtController,
                     decoration: InputDecoration(
                       contentPadding: const EdgeInsets.fromLTRB(15, 12, 15, 12),
                       fillColor: ColorConstant.transparent,
@@ -60,12 +72,36 @@ class _AddHobbyListScreenState extends State<AddHobbyListScreen> {
                         borderSide: BorderSide(color: ColorConstant.buttonBorderColor,width: 1),
                       )
                     ),
+
+                    onTap: () {
+                      if(_txtController.text.isEmpty){
+                        setState(() {
+                          isSearchEnable = true;
+                        });
+                      }
+                    },
+                    onChanged: (value){
+                      print("valueCheck ${value.length}");
+                      if(value.isEmpty){
+                        _searchHistory.clear();
+                        setState(() {
+                        });
+                      }
+                    },
+                    onFieldSubmitted: (value){
+                      _searchHistory.clear();
+                      items.forEach((pc) {
+                        if (pc['title'].contains(value)) _searchHistory.add(pc);
+                      });
+                      setState(() {
+                      });
+                    },
                   ),
                   const SizedBox(height: 30),
                   SizedBox(
                     height: 400,
                     child: GridView.builder(
-                        itemCount: items.length,
+                        itemCount: isSearchEnable ? _searchHistory.length : items.length,
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
                             mainAxisSpacing: 20,
@@ -73,18 +109,10 @@ class _AddHobbyListScreenState extends State<AddHobbyListScreen> {
                             mainAxisExtent: 40
                         ),
                         itemBuilder: (context , index){
-                          return InkWell(
-                            onTap: () {
-                              Navigator.push(context, MaterialPageRoute(builder: (context) => AddHobbiesSearchScreen()));
-                            },
-                            child: Container(
-                              alignment: Alignment.bottomRight,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                border: Border.all(width: 1,color: ColorConstant.buttonBorderColor)
-                              ),
-                              child: Center(child: Text(items[index],style: TextStyles.tabTextFont)),
-                            ),
+                          List tempList = isSearchEnable ? _searchHistory : items;
+                          return _buildCardViewWidget(
+                            index: index,
+                            title: tempList[index],
                           );
                         }
                     ),
@@ -94,5 +122,44 @@ class _AddHobbyListScreenState extends State<AddHobbyListScreen> {
             ),
           ),
     ));
+  }
+
+  _buildCardViewWidget({
+    required int index,
+    required String title,
+  }) {
+    return InkWell(
+      onTap: index == 2
+          ? () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) =>  AddHobbiesSearchScreen()),
+        );
+      }
+          : () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) =>  AddHobbyListSearchScreen()),
+        );
+      },
+      child: Column(
+        children: [
+          Container(
+            padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 9),
+            height: 35,
+            width: 152,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(
+                  color: ColorConstant.gray,
+                )),
+            child: Text(
+              title,
+              style: TextStyles.tabTextFont,
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
