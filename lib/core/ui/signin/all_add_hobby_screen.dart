@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../router.dart';
 import '../../constant/color_constant.dart';
@@ -28,7 +29,7 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                          child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                          child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
                       const Spacer(),
                       const SizedBox(),
                     ],
@@ -64,7 +65,7 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                             children: [
                               Text(StringConstant.badminton,style: TextStyles.tabTextFont),
                               Spacer(),
-                              Icon(Icons.cancel_outlined,color: ColorConstant.gray,)
+                              SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                             ],
                           ),
                         ),
@@ -82,7 +83,7 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                             children: [
                               Text(StringConstant.photography,style: TextStyles.tabTextFont),
                               Spacer(),
-                              Icon(Icons.cancel_outlined,color: ColorConstant.gray,)
+                              SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                             ],
                           ),
                         ),
@@ -106,7 +107,7 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                           children: [
                             Text(StringConstant.surfing,style: TextStyles.tabTextFont),
                             Spacer(),
-                            Icon(Icons.cancel_outlined,color: ColorConstant.gray,)
+                            SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                           ],
                         ),
                       ),

@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -6,16 +7,14 @@ import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
-import 'all_add_hobby_screen.dart';
-import 'multi_selected_search_hobby.dart';
-class AddNewHobbiesScreen extends StatefulWidget {
-  const AddNewHobbiesScreen({Key? key}) : super(key: key);
+class HobbiesScreen extends StatefulWidget {
+  const HobbiesScreen({Key? key}) : super(key: key);
 
   @override
-  State<AddNewHobbiesScreen> createState() => _AddNewHobbiesScreenState();
+  State<HobbiesScreen> createState() => _HobbiesScreenState();
 }
 
-class _AddNewHobbiesScreenState extends State<AddNewHobbiesScreen> {
+class _HobbiesScreenState extends State<HobbiesScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -29,22 +28,24 @@ class _AddNewHobbiesScreenState extends State<AddNewHobbiesScreen> {
                     InkWell(onTap: () {
                       Navigator.pop(context);
                     },
-                        child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover)),
+                        child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                    const SizedBox(width: 30),
+                    Text(StringConstant.myProfile,style: TextStyles.menuTextFont,),
                     const Spacer(),
-                    const SizedBox(),
+                    SizedBox(),
                   ],
                 ),
                 const SizedBox(height: 36),
                 Center(
-                  child: Text(StringConstant.addHobby,
+                  child: Text(StringConstant.myHobbies,
                       style: TextStyles.headTextFont
                   ),
                 ),
                 const SizedBox(height: 36),
                 Center(
                   child: Text('You have 1 hobby',
-                  style: TextStyles.regularText(
-                    fontWeight: FontWeight.w500),
+                    style: TextStyles.regularText(
+                        fontWeight: FontWeight.w500),
                   ),
                 ),
                 SizedBox(height: 24),
@@ -70,13 +71,13 @@ class _AddNewHobbiesScreenState extends State<AddNewHobbiesScreen> {
                 Text(StringConstant.intermediate,style: TextStyles.regularText(),),
                 Spacer(),
                 InkWell(
-                  onTap: () => Navigator.pushNamed(context, Routes.multiSelectedHobbyScreen),
+                  // onTap: () => Navigator.pushNamed(context, Routes.multiSelectedHobbyScreen),
                   child: Container(
                     height: 58,width: 311,
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(color: ColorConstant.navyBlue,width: 1.5),
-                        color: ColorConstant.transparent,
+                      borderRadius: BorderRadius.circular(30),
+                      border: Border.all(color: ColorConstant.navyBlue,width: 1.5),
+                      color: ColorConstant.transparent,
                     ),
                     child: Center(
                       child: Text(StringConstant.addNewHobby,
@@ -87,17 +88,16 @@ class _AddNewHobbiesScreenState extends State<AddNewHobbiesScreen> {
                 ),
                 SizedBox(height: 20),
                 InkWell(
-                  onTap: () => Navigator.pushNamed(context, Routes.allAddHobbyScreen),
+                  // onTap: () => Navigator.pushNamed(context, Routes.allAddHobbyScreen),
                   child: Container(
                     height: 58,width: 311,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        border: Border.all(color: ColorConstant.buttonColor,width: 1.5),
-                        color: ColorConstant.transparent
+                        color: ColorConstant.buttonColor
                     ),
                     child: Center(
-                      child: Text(StringConstant.nextStep,
-                        style: TextStyles.semiBoldText(fontSize: 16,fontWeight: FontWeight.w600,color: ColorConstant.buttonColor),
+                      child: Text(StringConstant.save,
+                        style: TextStyles.boldText(),
                       ),
                     ),
                   ),
@@ -105,6 +105,6 @@ class _AddNewHobbiesScreenState extends State<AddNewHobbiesScreen> {
               ],
             ),
           ),
-    ));
+        ));
   }
 }

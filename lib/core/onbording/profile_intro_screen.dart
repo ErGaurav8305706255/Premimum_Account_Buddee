@@ -1,5 +1,6 @@
 import 'package:clippy_flutter/arc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 
 import '../../router.dart';
@@ -106,7 +107,7 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                 edge: Edge.BOTTOM,
                 height: 50,
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 32),
                   height: 370,
                   decoration: BoxDecoration(
                     color: ColorConstant.backGroundColor,
@@ -121,7 +122,7 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                           )),
                           Spacer(),
                           InkWell(onTap: () => Navigator.pushNamed(context, Routes.profileMainScreen),
-                              child: Image.asset(ImageConstant.menu,height: 32,width: 32,fit: BoxFit.cover,))
+                              child: SvgPicture.asset(ImageConstant.menuButtonSvg,height: 32,width: 32,fit: BoxFit.cover,))
                         ],
                       ),
                       SizedBox(height: 180),
@@ -132,7 +133,7 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                       SizedBox(height: 8),
                       Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(ImageConstant.location,height: 15,width: 12,fit: BoxFit.cover,),
+                          SvgPicture.asset(ImageConstant.locationSvg,height: 15,width: 12,fit: BoxFit.cover,),
                           SizedBox(width: 6),
                           Text(StringConstant.london,
                               style: TextStyles.mediumText(
@@ -150,7 +151,7 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                           ),
                           child: Row(
                             children: [
-                              Image.asset(ImageConstant.diamond,height: 15,width: 16,fit: BoxFit.cover,),
+                              SvgPicture.asset(ImageConstant.diamondSvg,height: 15,width: 16,fit: BoxFit.cover,),
                               SizedBox(width: 6),
                               Text(StringConstant.premium,style: TextStyles.boldText(
                                 fontSize: 14,fontWeight: FontWeight.w400
@@ -175,13 +176,13 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                   top: 186,
                   left: 221,
                   child: InkWell(onTap: () => Navigator.pushNamed(context, Routes.galleryScreen),
-                    child: Container(
+                    child: Container(padding: EdgeInsets.all(8),
                       height: 32,
                       width: 32,
                       decoration: BoxDecoration(color: ColorConstant.buttonBorderColor,
                           borderRadius: BorderRadius.circular(40)
                       ),
-                      child: Icon(Icons.camera_alt,color: ColorConstant.white,size: 18),
+                      child: SvgPicture.asset(ImageConstant.cameraSvg,height: 13,width: 16,fit: BoxFit.cover),
                     ),
                   ))
             ],

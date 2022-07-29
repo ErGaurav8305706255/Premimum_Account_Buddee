@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../router.dart';
 import '../../constant/color_constant.dart';
@@ -17,32 +18,32 @@ class _GalleryScreenState extends State<GalleryScreen> {
   final List items = [
     {
       'image': 'assets/images/persn.png',
-      'title':'assets/images/sign.png',
+      'title':'assets/images/addicon.svg',
 
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/Add.png',
+      'title':'assets/images/addicon.svg',
 
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/Add.png',
+      'title':'assets/images/addicon.svg',
 
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/Add.png',
+      'title':'assets/images/addicon.svg',
 
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/Add.png',
+      'title':'assets/images/addicon.svg',
 
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/Add.png',
+      'title':'assets/images/addicon.svg',
 
     },
   ];
@@ -60,7 +61,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
                   InkWell(onTap: () {
                     Navigator.pop(context);
                   },
-                      child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                      child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
                   Spacer(),
                   SizedBox()
                 ],
@@ -91,7 +92,7 @@ class _GalleryScreenState extends State<GalleryScreen> {
                           ),
                           child: InkWell(
                               // onTap: () => Navigator.pushNamed(context, Routes.multiPhotoScreen),
-                              child: Image.asset(items[index]['title'],height: 20,width: 20,fit: BoxFit.cover,))
+                              child: SvgPicture.asset(items[index]['title'],height: 20,width: 20,fit: BoxFit.cover,))
                       );
                     }
                 ),

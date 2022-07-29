@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 import 'package:premium_account_buddee/core/ui/signin/signup_about.dart';
 
@@ -36,7 +37,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                        child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)
+                        child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover),
                       ),
                       const SizedBox()
                     ],
@@ -142,7 +143,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                       child: Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(ImageConstant.google,height: 24,width: 24,fit: BoxFit.cover,),
+                          SvgPicture.asset(ImageConstant.googleIconSvg,height: 24,width: 24,fit: BoxFit.cover,),
                           const SizedBox(width: 8),
                           Text(StringConstant.signWithGoogle,
                           style: TextStyles.semiBoldText(fontSize: 16),
@@ -165,7 +166,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       ),
                       child: Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Image.asset(ImageConstant.facebook,height: 24,width: 24,fit: BoxFit.cover,),
+                          Image.asset(ImageConstant.facebook,height: 24,width: 24,fit: BoxFit.cover,) ,
                           const SizedBox(width: 8),
                           Text(StringConstant.signWithFacebook,
                             style: TextStyles.semiBoldText(fontSize: 16),

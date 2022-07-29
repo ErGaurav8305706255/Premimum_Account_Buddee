@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 
 import '../../../router.dart';
@@ -30,7 +31,7 @@ class _SignUpAboutState extends State<SignUpAbout> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                          child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                          child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover)),
                       const Spacer(),
                       const SizedBox(),
                     ],
@@ -103,18 +104,20 @@ class _SignUpAboutState extends State<SignUpAbout> {
                         indicatorColor: ColorConstant.transparent,
                         labelColor: ColorConstant.textColor,
                         labelStyle: TextStyles.tabTextFont,
+                        unselectedLabelColor: ColorConstant.gray,
+
                         tabs: [
                           Tab(
                             child: Row(
                               children: [
-                                const Icon(Icons.male),
+                                SvgPicture.asset(ImageConstant.maleSvg,height: 32,width: 30,fit: BoxFit.cover),
                                 Text(StringConstant.male)
                               ],
                             ),
                           ),
                           Tab(child: Row(
                             children: [
-                              const Icon(Icons.female),
+                              SvgPicture.asset(ImageConstant.femaleSvg,height: 32,width: 30,fit: BoxFit.cover),
                               Text(StringConstant.female)
                             ],
                           ),)

@@ -3,8 +3,11 @@ import 'package:flutter/material.dart';
 import 'core/onBording/signin_intro_screen.dart';
 import 'core/onbording/profile_intro_screen.dart';
 import 'core/ui/profile/gallery_screen.dart';
+import 'core/ui/profile/hobbies_screen.dart';
 import 'core/ui/profile/information_screen.dart';
+import 'core/ui/profile/privacy_policy_screen.dart';
 import 'core/ui/profile/profile_main_screen.dart';
+import 'core/ui/profile/search_setting_screen.dart';
 import 'core/ui/signin/add_hobbies_search_screen.dart';
 import 'core/ui/signin/add_hobby_list_search_screen.dart';
 import 'core/ui/signin/add_new_hobbies.dart';
@@ -69,6 +72,15 @@ class RouterApp{
       case Routes.informationScreen:
         return MaterialPageRoute(
             builder: (BuildContext context) => const InformationScreen());
+      case Routes.hobbiesScreen:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const HobbiesScreen());
+      case Routes.searchSettingScreen:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const SearchSettingScreen());
+      case Routes.privacyPolicyScreen:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const PrivacyPolicyScreen());
 
 
       default:
@@ -99,6 +111,9 @@ class Routes {
   static const String galleryScreen = '/galleryScreen';
   static const String profileMainScreen = '/profileMainScreen';
   static const String informationScreen = '/informationScreen';
+  static const String hobbiesScreen = '/hobbiesScreen';
+  static const String searchSettingScreen = '/searchSettingScreen';
+  static const String privacyPolicyScreen = '/privacyPolicyScreen';
 
   static const String noInternetScreen = '/noInternetScreen';
 }

@@ -52,9 +52,28 @@ class StringConstant{
   static String hobbies = "Hobbies";
   static String searchSettings = "Search Settings";
   static String privacyPolicy = "Privacy Policy";
+  static String searchSetting = "Search Settings";
+  static String both = "Both";
+  static String distance = "Distance";
+  static String max = "Max";
+  static String age = "Age";
+  static String apply = "Apply";
+  static String form = "Form";
+  static String to = "To";
+  static String effective = "Effective: October 1, 2021";
+  static String viewPrevious = "(View previous versions: 4/19/21, 6/12/20)";
+  static String ourPreviousPolicy ="Our Privacy Policy explains how Buddlee collects, uses, and discloses information about you. The terms “Buddlee,” “we,” “us,” and “our” include Buddlee LLC and our affiliates. We use the terms “member,” “you,” and “your” to mean any person using our Platform or attending related events, including any organization or person using the Platform on an organization’s behalf. This Privacy Policy applies to the processing of information about members and other individuals that we collect when you use our “Platform,” which means any website, application, or services we offer, or when you communicate with us. For information about choices you may have under this policy, please see “Your Choices” below.";
+  static String thisPrivacy = "This Privacy Policy does not apply to the information that you may provide to third parties, such as members, and others with whom you may share information about yourself. sources...";
+
 
 
 
 }
+
+
+
+
+
+
 
 

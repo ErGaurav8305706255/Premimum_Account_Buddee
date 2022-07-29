@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
@@ -15,31 +16,31 @@ class _MultiPhotoScreenState extends State<MultiPhotoScreen> {
   final List items = [
     {
       'image': 'assets/images/persn.png',
-      'title':'assets/images/sign.png',
+      'title':'assets/images/rightsign.svg',
 
     },
     {
       'image': 'assets/images/img2.png',
-      'title':'assets/images/sign.png',
+      'title':'assets/images/rightsign.svg',
     },
     {
       'image': 'assets/images/img3.png',
-      'title':'assets/images/sign.png',
+      'title':'assets/images/rightsign.svg',
 
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/Add.png',
+      'title':'assets/images/addicon.svg',
 
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/Add.png',
+      'title':'assets/images/addicon.svg',
 
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/Add.png',
+      'title':'assets/images/addicon.svg',
 
     },
 
@@ -58,7 +59,7 @@ class _MultiPhotoScreenState extends State<MultiPhotoScreen> {
                   InkWell(onTap: () {
                     Navigator.pop(context);
                   },
-                      child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                      child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
                   Spacer(),
                   SizedBox()
                 ],
@@ -87,7 +88,7 @@ class _MultiPhotoScreenState extends State<MultiPhotoScreen> {
                                 image: AssetImage(items[index]['image']),fit: BoxFit.cover
                             )
                         ),
-                        child: Image.asset(items[index]['title'],height: 20,width: 20,fit: BoxFit.cover,)
+                        child: SvgPicture.asset(items[index]['title'],height: 20,width: 20,fit: BoxFit.cover,)
                       );
                     }
                     ),
@@ -100,14 +101,14 @@ class _MultiPhotoScreenState extends State<MultiPhotoScreen> {
                 children: [
                   Column(
                     children: [
-                      Icon(Icons.stars, color: ColorConstant.starColor),
+                      SvgPicture.asset(ImageConstant.commentSvg,height: 32,width: 32,fit: BoxFit.cover),
                       Text('Main Photo',style: TextStyles.starFont,)
                     ],
                   ),
                   SizedBox(width: 53),
                   Column(
                     children: [
-                      Icon(Icons.cancel,color: ColorConstant.deleteColor),
+                      SvgPicture.asset(ImageConstant.cancelSvg,height: 32,width: 32,fit: BoxFit.cover),
                       Text('Delete',style: TextStyles.deleteFont,)
                     ],
                   )

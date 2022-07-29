@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../router.dart';
 import '../../constant/color_constant.dart';
@@ -28,7 +29,7 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                          child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                          child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover),),
                       const Spacer(),
                       const SizedBox(),
                     ],
@@ -77,7 +78,7 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                         child: Text(StringConstant.badminton,style: TextStyles.tabTextFont),
                       ),
                       Spacer(),
-                      Icon(Icons.cancel_outlined)
+                      SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                     ],
                   ),
                 ),

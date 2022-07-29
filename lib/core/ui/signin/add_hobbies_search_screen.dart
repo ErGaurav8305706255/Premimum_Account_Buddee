@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:premium_account_buddee/core/constant/image_constant.dart';
 
 import '../../../router.dart';
@@ -29,7 +30,7 @@ class _AddHobbiesSearchScreenState extends State<AddHobbiesSearchScreen> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                          child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                          child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover)),
                       const Spacer(),
                       const SizedBox(),
                     ],

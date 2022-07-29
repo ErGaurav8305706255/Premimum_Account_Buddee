@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../router.dart';
 import '../../constant/color_constant.dart';
@@ -29,7 +30,7 @@ class _AddThreeHobbyScreenState extends State<AddThreeHobbyScreen> {
                         InkWell(onTap: () {
                           Navigator.pop(context);
                         },
-                            child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                            child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover)),
                         const Spacer(),
                         const SizedBox(),
                       ],
@@ -63,10 +64,10 @@ class _AddThreeHobbyScreenState extends State<AddThreeHobbyScreen> {
                           child: Text(StringConstant.badminton,style: TextStyles.tabTextFont),
                         ),
                         Spacer(),
-                        Icon(Icons.border_color_outlined,color: ColorConstant.gray),
+                        SvgPicture.asset(ImageConstant.editSvg,height: 24,width: 24,fit: BoxFit.cover),
                         // Image.asset(ImageConstant.edit,width: 19,height: 19.38,fit: BoxFit.cover),
                         SizedBox(width: 13),
-                        Icon(Icons.cancel_outlined, color: ColorConstant.gray,)
+                        SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                       ],
                     ),
                   ),
@@ -90,10 +91,10 @@ class _AddThreeHobbyScreenState extends State<AddThreeHobbyScreen> {
                           child: Text(StringConstant.photography,style: TextStyles.tabTextFont),
                         ),
                         Spacer(),
-                        Icon(Icons.border_color_outlined,color: ColorConstant.gray),
+                        SvgPicture.asset(ImageConstant.editSvg,height: 24,width: 24,fit: BoxFit.cover),
                         // Image.asset(ImageConstant.edit,width: 19,height: 19.38,fit: BoxFit.cover),
                         SizedBox(width: 13),
-                        Icon(Icons.cancel_outlined, color: ColorConstant.gray,)
+                        SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                       ],
                     ),
                   ),
@@ -117,10 +118,10 @@ class _AddThreeHobbyScreenState extends State<AddThreeHobbyScreen> {
                           child: Text(StringConstant.surfing,style: TextStyles.tabTextFont),
                         ),
                         Spacer(),
-                        Icon(Icons.border_color_outlined,color: ColorConstant.gray),
+                        SvgPicture.asset(ImageConstant.editSvg,height: 24,width: 24,fit: BoxFit.cover),
                         // Image.asset(ImageConstant.edit,width: 19,height: 19.38,fit: BoxFit.cover),
                         SizedBox(width: 13),
-                        Icon(Icons.cancel_outlined, color: ColorConstant.gray,)
+                        SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                       ],
                     ),
                   ),

@@ -1,5 +1,6 @@
 import 'package:clippy_flutter/arc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:premium_account_buddee/core/constant/image_constant.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
 
@@ -56,12 +57,12 @@ class _ProfileMainScreenState extends State<ProfileMainScreen> {
                           InkWell(onTap: () {
                             Navigator.pop(context);
                           },
-                              child: Image.asset(ImageConstant.shape,height: 16,width: 9,fit: BoxFit.cover,)),
-                          SizedBox(width: 20),
+                              child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover),),
+                          SizedBox(width: 30),
                           Text(StringConstant.myProfile,
                               style: TextStyles.menuTextFont),
                           Spacer(),
-                          Image.asset(ImageConstant.close,height: 24,width: 24,fit: BoxFit.cover,)
+                          SvgPicture.asset(ImageConstant.closeSvg,height: 24,width: 24,fit: BoxFit.cover,)
                         ],
                       ),
                       SizedBox(height: 170),
@@ -73,7 +74,7 @@ class _ProfileMainScreenState extends State<ProfileMainScreen> {
                           Spacer(),
                           InkWell(
                               onTap: () => Navigator.pushNamed(context, Routes.informationScreen),
-                              child: Image.asset(ImageConstant.button,height: 35,width: 35,fit: BoxFit.cover,))
+                              child: SvgPicture.asset(ImageConstant.nxtButtonSvg,height: 35,width: 35,fit: BoxFit.cover,))
                         ],
                       ),
                       SizedBox(height: 50),
@@ -83,10 +84,8 @@ class _ProfileMainScreenState extends State<ProfileMainScreen> {
                               style: TextStyles.menuTextFont
                           ),
                           Spacer(),
-                          InkWell(onTap: () {
-                            // Navigator.push(context, MaterialPageRoute(builder: (context) => HobbiesScreen()));
-                          },
-                              child: Image.asset(ImageConstant.button,height: 35,width: 35,fit: BoxFit.cover,))
+                          InkWell(onTap: () => Navigator.pushNamed(context, Routes.hobbiesScreen),
+                              child: SvgPicture.asset(ImageConstant.nxtButtonSvg,height: 35,width: 35,fit: BoxFit.cover,))
                         ],
                       ),
                       SizedBox(height: 50),
@@ -96,11 +95,8 @@ class _ProfileMainScreenState extends State<ProfileMainScreen> {
                               style: TextStyles.menuTextFont
                           ),
                           Spacer(),
-                          InkWell(onTap: () {
-                            // Navigator.push(context, MaterialPageRoute(builder: (context) =>  SearchSettingScreen()));
-                          },
-                              child:
-                              Image.asset(ImageConstant.button,height: 35,width: 35,fit: BoxFit.cover,))
+                          InkWell(onTap: () => Navigator.pushNamed(context, Routes.searchSettingScreen),
+                              child: SvgPicture.asset(ImageConstant.nxtButtonSvg,height: 35,width: 35,fit: BoxFit.cover,))
                         ],
                       ),
                       SizedBox(height: 50),
@@ -110,11 +106,8 @@ class _ProfileMainScreenState extends State<ProfileMainScreen> {
                               style: TextStyles.menuTextFont
                           ),
                           Spacer(),
-                          InkWell(onTap: () {
-                            // Navigator.push(context, MaterialPageRoute(builder: (context) => PrivacyPolicyScreen()));
-                          },
-                              child:
-                              Image.asset(ImageConstant.button,height: 35,width: 35,fit: BoxFit.cover,))
+                          InkWell(onTap: () => Navigator.pushNamed(context, Routes.privacyPolicyScreen),
+                              child: SvgPicture.asset(ImageConstant.nxtButtonSvg,height: 35,width: 35,fit: BoxFit.cover,))
                         ],
                       )
                     ],

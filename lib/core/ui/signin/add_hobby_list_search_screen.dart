@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:premium_account_buddee/core/constant/color_constant.dart';
 import 'package:premium_account_buddee/core/constant/string_constant.dart';
 import 'package:premium_account_buddee/core/constant/text_style.dart';
@@ -18,7 +19,7 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
 
   final List _searchHistory = [];
   bool isSearchEnable = false;
-  final TextEditingController _txtController = TextEditingController();
+  final TextEditingController _searchController = TextEditingController();
 
   @override
   void initState() {
@@ -46,7 +47,7 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                          child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                          child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover)),
                       const Spacer(),
                       const SizedBox(),
                     ],
@@ -61,7 +62,7 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
                   Text(StringConstant.search,style: TextStyles.normalFont,),
                   const SizedBox(height: 8),
                   TextFormField(
-                    controller: _txtController,
+                    controller: _searchController,
                     decoration: InputDecoration(
                       contentPadding: const EdgeInsets.fromLTRB(15, 12, 15, 12),
                       fillColor: ColorConstant.transparent,
@@ -75,7 +76,7 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
                     ),
 
                     onTap: () {
-                      if(_txtController.text.isEmpty){
+                      if(_searchController.text.isEmpty){
                         setState(() {
                           isSearchEnable = true;
                         });
@@ -100,7 +101,7 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
                   ),
                   const SizedBox(height: 30),
                   SizedBox(
-                    height: 400,
+                    height: 450,
                     child: GridView.builder(
                         itemCount: isSearchEnable ? _searchHistory.length : items.length,
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(

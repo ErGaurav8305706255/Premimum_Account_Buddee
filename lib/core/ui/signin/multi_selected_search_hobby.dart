@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../../router.dart';
 import '../../constant/color_constant.dart';
@@ -45,7 +46,7 @@ class _MultiSelectedHobbyScreenState extends State<MultiSelectedHobbyScreen> {
                       InkWell(onTap: () {
                         Navigator.pop(context);
                       },
-                          child: Image.asset(ImageConstant.shape,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
+                          child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover)),
                       const Spacer(),
                       const SizedBox(),
                     ],
