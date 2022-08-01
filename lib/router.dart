@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'core/onBording/signin_intro_screen.dart';
 import 'core/onbording/profile_intro_screen.dart';
+import 'core/ui/explore/explore_screen.dart';
 import 'core/ui/profile/gallery_screen.dart';
 import 'core/ui/profile/hobbies_screen.dart';
 import 'core/ui/profile/information_screen.dart';
@@ -81,6 +82,9 @@ class RouterApp{
       case Routes.privacyPolicyScreen:
         return MaterialPageRoute(
             builder: (BuildContext context) => const PrivacyPolicyScreen());
+      case Routes.exploreScreen:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const ExploreScreen());
 
 
       default:
@@ -114,6 +118,7 @@ class Routes {
   static const String hobbiesScreen = '/hobbiesScreen';
   static const String searchSettingScreen = '/searchSettingScreen';
   static const String privacyPolicyScreen = '/privacyPolicyScreen';
+  static const String exploreScreen = '/exploreScreen';
 
   static const String noInternetScreen = '/noInternetScreen';
 }

@@ -99,18 +99,26 @@ class _MultiPhotoScreenState extends State<MultiPhotoScreen> {
               SizedBox(height: 24),
               Row(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Column(
-                    children: [
-                      SvgPicture.asset(ImageConstant.commentSvg,height: 32,width: 32,fit: BoxFit.cover),
-                      Text('Main Photo',style: TextStyles.starFont,)
-                    ],
+                  InkWell(onTap: () {
+                    Navigator.pop(context);
+                  },
+                    child: Column(
+                      children: [
+                        SvgPicture.asset(ImageConstant.commentSvg,height: 32,width: 32,fit: BoxFit.cover),
+                        Text('Main Photo',style: TextStyles.starFont,)
+                      ],
+                    ),
                   ),
                   SizedBox(width: 53),
-                  Column(
-                    children: [
-                      SvgPicture.asset(ImageConstant.cancelSvg,height: 32,width: 32,fit: BoxFit.cover),
-                      Text('Delete',style: TextStyles.deleteFont,)
-                    ],
+                  InkWell(onTap: () {
+                    Navigator.pop(context);
+                  },
+                    child: Column(
+                      children: [
+                        SvgPicture.asset(ImageConstant.cancelSvg,height: 32,width: 32,fit: BoxFit.cover),
+                        Text('Delete',style: TextStyles.deleteFont,)
+                      ],
+                    ),
                   )
                 ],
               )

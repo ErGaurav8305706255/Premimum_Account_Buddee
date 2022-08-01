@@ -32,6 +32,16 @@ class ImageConstant {
   static const String crossSvg = '$base/cross.svg';
   static const String facebookSvg = '$base/facebook.svg';
   static const String searchSvg = '$base/search.svg';
+  static const String filterSvg = '$base/filter.svg';
+  static const String image1 = '$base/image1.png';
+  static const String image2 = '$base/image2.png';
+  static const String image3 = '$base/image3.png';
+  static const String image4 = '$base/image4.png';
+  static const String ritSignSvg = '$base/ritsign.svg';
+  static const String canclSvg = '$base/cancl.svg';
+  static const String arrowSvg = '$base/arrow.svg';
+
+
 
 
 }

@@ -30,78 +30,78 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
     'Astronomy', 'Birdwatching', 'Badminton', 'Camping', 'Chess', 'Dance','Drawing', 'Fitness', 'Fishing', 'Golf', 'Hoking', 'Kayaking',
     'Music', 'Origami', 'Photography', 'Rock Claiming', 'Surfing', 'Tennis', 'Trainspotting', 'Yoga'
   ];
-
+  // String search ='';
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-          body: SingleChildScrollView(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 32,vertical: 44),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      InkWell(onTap: () {
-                        Navigator.pop(context);
-                      },
-                          child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover)),
-                      const Spacer(),
-                      const SizedBox(),
-                    ],
+          body: Padding(
+            padding: const EdgeInsets.fromLTRB(32, 44, 32, 5),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    InkWell(onTap: () {
+                      Navigator.pop(context);
+                    },
+                        child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover)),
+                    const Spacer(),
+                    const SizedBox(),
+                  ],
+                ),
+                const SizedBox(height: 39),
+                Center(
+                  child: Text(StringConstant.addHobby,
+                  style: TextStyles.headTextFont
                   ),
-                  const SizedBox(height: 39),
-                  Center(
-                    child: Text(StringConstant.addHobby,
-                    style: TextStyles.headTextFont
-                    ),
+                ),
+                const SizedBox(height: 21),
+                Text(StringConstant.search,style: TextStyles.normalFont,),
+                const SizedBox(height: 8),
+                TextFormField(
+                  controller: _searchController,
+                  decoration: InputDecoration(
+                    contentPadding: const EdgeInsets.fromLTRB(15, 12, 15, 12),
+                    fillColor: ColorConstant.transparent,
+                    filled: true,
+                    hintText: StringConstant.searchForHobbies,
+                    prefixIcon: const Icon(Icons.search),
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(10),
+                      borderSide: BorderSide(color: ColorConstant.buttonBorderColor,width: 1),
+                    )
                   ),
-                  const SizedBox(height: 21),
-                  Text(StringConstant.search,style: TextStyles.normalFont,),
-                  const SizedBox(height: 8),
-                  TextFormField(
-                    controller: _searchController,
-                    decoration: InputDecoration(
-                      contentPadding: const EdgeInsets.fromLTRB(15, 12, 15, 12),
-                      fillColor: ColorConstant.transparent,
-                      filled: true,
-                      hintText: StringConstant.searchForHobbies,
-                      prefixIcon: const Icon(Icons.search),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(10),
-                        borderSide: BorderSide(color: ColorConstant.buttonBorderColor,width: 1),
-                      )
-                    ),
 
-                    onTap: () {
-                      if(_searchController.text.isEmpty){
-                        setState(() {
-                          isSearchEnable = true;
-                        });
-                      }
-                    },
-                    onChanged: (value){
-                      print("valueCheck ${value.length}");
-                      if(value.isEmpty){
-                        _searchHistory.clear();
-                        setState(() {
-                        });
-                      }
-                    },
-                    onFieldSubmitted: (value){
-                      _searchHistory.clear();
-                      items.forEach((pc) {
-                        if (pc['title'].contains(value)) _searchHistory.add(pc);
+                  onTap: () {
+                    if(_searchController.text.isEmpty){
+                      setState(() {
+                        isSearchEnable = true;
                       });
+                    }
+                  },
+                  onChanged: (value){
+                    print("valueCheck ${value.length}");
+                    if(value.isEmpty){
+                      _searchHistory.clear();
                       setState(() {
                       });
-                    },
-                  ),
-                  const SizedBox(height: 30),
-                  SizedBox(
-                    height: 450,
+                    }
+                  },
+                  onFieldSubmitted: (value){
+                    _searchHistory.clear();
+                    items.forEach((pc) {
+                      if (pc['title'].contains(value)) _searchHistory.add(pc);
+                    });
+                    setState(() {
+                    });
+                  },
+                ),
+                const SizedBox(height: 30),
+                Expanded(
+                  child: SizedBox(
+                    height: double.infinity,
                     child: GridView.builder(
                         itemCount: isSearchEnable ? _searchHistory.length : items.length,
                         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -119,8 +119,8 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
                         }
                     ),
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
     ));

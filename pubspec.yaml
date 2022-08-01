@@ -39,6 +39,7 @@ dependencies:
   clippy_flutter: ^1.1.1
   custom_navigator: ^0.3.0
   flutter_range_slider: ^1.5.0
+  carousel_slider: ^4.1.1
 
 dev_dependencies:
   flutter_test:

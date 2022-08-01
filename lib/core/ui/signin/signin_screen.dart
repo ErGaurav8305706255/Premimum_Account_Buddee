@@ -108,7 +108,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   InkWell(
                     onTap: () {
                       if(_formKey.currentState!.validate()){
-                        // Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpAbout()));
+                        Navigator.pushNamed(context, Routes.exploreScreen);
                       }
                     },
                     child: Container(
