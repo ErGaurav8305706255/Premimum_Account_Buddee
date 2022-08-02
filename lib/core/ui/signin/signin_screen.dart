@@ -108,7 +108,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   InkWell(
                     onTap: () {
                       if(_formKey.currentState!.validate()){
-                        Navigator.pushNamed(context, Routes.exploreScreen);
+                        Navigator.pushNamed(context, Routes.bottomNavigatorBarScreen);
                       }
                     },
                     child: Container(

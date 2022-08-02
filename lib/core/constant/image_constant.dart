@@ -40,6 +40,12 @@ class ImageConstant {
   static const String ritSignSvg = '$base/ritsign.svg';
   static const String canclSvg = '$base/cancl.svg';
   static const String arrowSvg = '$base/arrow.svg';
+  static const String img5 = '$base/img5.png';
+  static const String img6 = '$base/img6.png';
+  static const String img7 = '$base/img7.png';
+  static const String img8 = '$base/img8.png';
+  static const String img9 = '$base/img9.png';
+  static const String img10 = '$base/img10.png';
 
 
 

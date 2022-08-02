@@ -18,6 +18,7 @@ class ColorConstant{
   static Color deleteColor = const Color(0xFFFF5858);
   static Color backGroundColor = const Color(0xFF58E5FF);
   static Color lightBackGroundColor = const Color(0xFFDFF6FF);
+  static Color lightIndicatorColor = const Color(0xFFD5F2F4);
 
 }
 

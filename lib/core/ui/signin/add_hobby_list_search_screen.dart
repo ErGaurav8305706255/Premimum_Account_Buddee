@@ -27,10 +27,68 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
   }
 
   final List items = [
-    'Astronomy', 'Birdwatching', 'Badminton', 'Camping', 'Chess', 'Dance','Drawing', 'Fitness', 'Fishing', 'Golf', 'Hoking', 'Kayaking',
-    'Music', 'Origami', 'Photography', 'Rock Claiming', 'Surfing', 'Tennis', 'Trainspotting', 'Yoga'
+    {
+      'title': StringConstant.astronomy,
+    },
+    {
+      'title': StringConstant.birdwatching,
+    },
+    {
+      'title': StringConstant.badminton,
+    },
+    {
+      'title': StringConstant.camping,
+    },
+    {
+      'title': StringConstant.chess,
+    },
+    {
+      'title': StringConstant.dance,
+    },
+    {
+      'title': StringConstant.drawing,
+    },
+    {
+      'title': StringConstant.fitness,
+    },
+    {
+      'title': StringConstant.fishing,
+    },
+    {
+      'title': StringConstant.golf,
+    },
+    {
+      'title': StringConstant.hoking,
+    },
+    {
+      'title': StringConstant.kayaking,
+    },
+    {
+      'title': StringConstant.music,
+    },
+    {
+      'title': StringConstant.origami,
+    },
+    {
+      'title': StringConstant.photography,
+    },
+    {
+      'title': StringConstant.rockClaiming,
+    },
+    {
+      'title': StringConstant.surfing,
+    },
+    {
+      'title': StringConstant.tennis,
+    },
+    {
+      'title': StringConstant.trainspotting,
+    },
+    {
+      'title': StringConstant.yoga,
+    },
   ];
-  // String search ='';
+
 
   @override
   Widget build(BuildContext context) {
@@ -114,7 +172,7 @@ class _AddHobbyListSearchScreenState extends State<AddHobbyListSearchScreen> {
                           List tempList = isSearchEnable ? _searchHistory : items;
                           return _buildCardViewWidget(
                             index: index,
-                            title: tempList[index],
+                            title: tempList[index]['title'],
                           );
                         }
                     ),

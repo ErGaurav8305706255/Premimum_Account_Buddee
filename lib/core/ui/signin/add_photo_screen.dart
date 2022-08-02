@@ -97,7 +97,7 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
               ),
               SizedBox(height: 188),
               InkWell(
-                onTap: () => Navigator.pushNamed(context, Routes.profileIntroScreen),
+                onTap: () => Navigator.pushNamed(context, Routes.bottomNavigatorBarScreen),
                 child: Container(height: 50,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(40),

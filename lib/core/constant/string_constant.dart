@@ -69,6 +69,38 @@ class StringConstant{
   static String noSpecific = "No specific niche yet just looking to make some photography friends";
   static String youGot = "YOU GOT 3 HOBBIES MATCHES!";
   static String away = "3 km away";
+  static String fitness = "Fitness";
+  static String astronomy = "Astronomy";
+  static String birdwatching = "Birdwatching";
+  static String camping = "Camping";
+  static String chess = "Chess";
+  static String dance = "Dance";
+  static String drawing = "Drawing";
+  static String fishing = "Fishing";
+  static String golf = "Golf";
+  static String hoking = "Hoking";
+  static String kayaking = "Kayaking";
+  static String music = "Music";
+  static String origami = "Origami";
+  static String rockClaiming = "Rock Claiming";
+  static String trainspotting = "Trainspotting";
+  static String tennis = "Tennis";
+  static String yoga = "Yoga";
+  static String tomOtherHobbies = "TOM’S OTHER HOBBIES";
+  static String astronomyIsTheStudy = "Astronomy is the study of everything in the universe beyond Earth's atmosphere. That includes objects like the Sun , the Moon , the planets, and the stars.";
+  static String likedYou = "Liked you";
+  static String explore = "Explore";
+  static String all = "All";
+  static String ann = "Ann, 21";
+  static String inga = "Inga, 24";
+  static String jes = "Jes, 28";
+  static String jeanny = "Jeanny, 20";
+  static String harry = "Harry";
+  static String messages = "Messages";
+  static String millie = "Millie";
+  static String haveYouEver = "Have you ever played any tournam..";
+  static String iamBased = "I'm based in Fulham, yourself?";
+  static String hahaYep = "Haha yep i'm exactly the same..";
 
 
 
