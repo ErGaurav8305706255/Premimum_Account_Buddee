@@ -6,7 +6,6 @@ import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
-import 'add_three_hobby_screen.dart';
 class AddTwoHobbyScreen extends StatefulWidget {
   const AddTwoHobbyScreen({Key? key}) : super(key: key);
 
@@ -69,7 +68,7 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                   child: Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.fromLTRB(9, 4, 10, 4),
+                        padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                         height: 32,width: 152,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -77,17 +76,17 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                         ),
                         child: Text(StringConstant.badminton,style: TextStyles.tabTextFont),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                     ],
                   ),
                 ),
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(StringConstant.lookingFor,style: TextStyles.normalFont),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: TextFormField(
@@ -106,20 +105,20 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(StringConstant.youHaveChooseTwoHobby,
                   style: TextStyles.regularText(fontWeight: FontWeight.w500),
                   ),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.fromLTRB(9, 4, 10, 4),
+                        padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                         height: 32,width: 152,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -127,9 +126,9 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                         ),
                         child: Text(StringConstant.badminton,style: TextStyles.tabTextFont),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       Container(
-                        padding: EdgeInsets.fromLTRB(9, 4, 10, 4),
+                        padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                         height: 32,width: 152,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -140,7 +139,7 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 51),
+                const SizedBox(height: 51),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: InkWell(
@@ -148,8 +147,14 @@ class _AddTwoHobbyScreenState extends State<AddTwoHobbyScreen> {
                     child: Container(
                       height: 58,width: 311,
                       decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [
+                              ColorConstant.buttonColor1,
+                              ColorConstant.buttonColor2
+                            ]
+                        ),
                           borderRadius: BorderRadius.circular(30),
-                          color: ColorConstant.buttonColor
+
                       ),
                       child: Center(
                         child: Text(StringConstant.save,

@@ -66,26 +66,26 @@ class _LikedScreenState extends State<LikedScreen> {
                     Navigator.pop(context);
                   },
                       child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
-                  SizedBox(width: 30),
+                  const SizedBox(width: 30),
                   Text(StringConstant.explore,
                       style: TextStyles.menuTextFont
                   ),
-                  Spacer(),
+                  const Spacer(),
                   SvgPicture.asset(ImageConstant.filterSvg,height: 24,width: 26,fit: BoxFit.cover,)
                 ],
               ),
-              SizedBox(height: 36),
+              const SizedBox(height: 33),
               Text(StringConstant.likedYou,style: TextStyles.headTextFont,),
-              SizedBox(height: 32),
-              Container(
+              const SizedBox(height: 32),
+              SizedBox(
                 height: 50,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
                   itemCount: data.length,
                     itemBuilder: (context, index) {
                   return Container(
-                    padding: EdgeInsets.all(10),
-                    margin: EdgeInsets.all(3),
+                    padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 20),
+                    margin: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(width: 1,color: ColorConstant.gray)
@@ -95,7 +95,7 @@ class _LikedScreenState extends State<LikedScreen> {
                     ),)),
                   );
                 })),
-              SizedBox(height: 27),
+              const SizedBox(height: 27),
               Expanded(
                 child: GridView.builder(
                     itemCount: 6,
@@ -127,7 +127,7 @@ class _LikedScreenState extends State<LikedScreen> {
                             )
                         ),
                       ),
-                      SizedBox(height: 5),
+                      const SizedBox(height: 5),
                       Text(data[index]['subtitle'],
                         textAlign: TextAlign.center,
                         style: TextStyles.lightText(

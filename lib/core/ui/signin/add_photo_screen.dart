@@ -6,6 +6,7 @@ import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
+
 class AddPhotoScreen extends StatefulWidget {
   const AddPhotoScreen({Key? key}) : super(key: key);
 
@@ -14,37 +15,30 @@ class AddPhotoScreen extends StatefulWidget {
 }
 
 class _AddPhotoScreenState extends State<AddPhotoScreen> {
-
   final List items = [
     {
       'image': 'assets/images/persn.png',
-      'title':'assets/images/rightsign.svg',
-
+      'title': 'assets/images/rightsign.svg',
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/addicon.svg',
-
+      'title': 'assets/images/addicon.svg',
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/addicon.svg',
-
+      'title': 'assets/images/addicon.svg',
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/addicon.svg',
-
+      'title': 'assets/images/addicon.svg',
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/addicon.svg',
-
+      'title': 'assets/images/addicon.svg',
     },
     {
       'image': 'assets/images/empy.png',
-      'title':'assets/images/addicon.svg',
-
+      'title': 'assets/images/addicon.svg',
     },
   ];
   @override
@@ -57,56 +51,69 @@ class _AddPhotoScreenState extends State<AddPhotoScreen> {
             children: [
               Row(
                 children: [
-                  InkWell(onTap: () {
-                    Navigator.pop(context);
-                  },
-                      child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
-                  Spacer(),
-                  SizedBox()
+                  InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: SvgPicture.asset(
+                        ImageConstant.backArrow,
+                        height: 15.86,
+                        width: 8.89,
+                        fit: BoxFit.cover,
+                      )),
+                  const Spacer(),
+                  const SizedBox()
                 ],
               ),
-              SizedBox(height: 36),
-              Text(
-                StringConstant.addPhoto,
-                  style: TextStyles.headTextFont),
-              SizedBox(height: 42),
+              const SizedBox(height: 36),
+              Text(StringConstant.addPhoto, style: TextStyles.headTextFont),
+              const SizedBox(height: 42),
               SizedBox(
                 height: 300,
                 child: GridView.builder(
                     itemCount: items.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         mainAxisSpacing: 8,
                         crossAxisSpacing: 8,
-                        mainAxisExtent: 140
-                    ),
-                    itemBuilder: (context , index){
+                        mainAxisExtent: 140),
+                    itemBuilder: (context, index) {
                       return Container(
-                        alignment: Alignment.bottomRight,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
-                                image: AssetImage(items[index]['image']),fit: BoxFit.cover
-                            )
-                        ),
-                        child: InkWell(onTap: () => Navigator.pushNamed(context, Routes.multiPhotoScreen),
-                            child: SvgPicture.asset(items[index]['title'],height: 20,width: 20,fit: BoxFit.cover,))
-                      );
-                    }
-                ),
+                          alignment: Alignment.bottomRight,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              image: DecorationImage(
+                                  image: AssetImage(items[index]['image']),
+                                  fit: BoxFit.cover)),
+                          child: InkWell(
+                              onTap: () => Navigator.pushNamed(
+                                  context, Routes.multiPhotoScreen),
+                              child: SvgPicture.asset(
+                                items[index]['title'],
+                                height: 20,
+                                width: 20,
+                                fit: BoxFit.cover,
+                              )));
+                    }),
               ),
-              SizedBox(height: 188),
+              const SizedBox(height: 188),
               InkWell(
-                onTap: () => Navigator.pushNamed(context, Routes.bottomNavigatorBarScreen),
-                child: Container(height: 50,
+                onTap: () => Navigator.pushNamed(
+                    context, Routes.bottomNavigatorBarScreen),
+                child: Container(
+                  height: 50,
                   decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: [
+                          ColorConstant.buttonColor1,
+                          ColorConstant.buttonColor2
+                        ]
+                    ),
                       borderRadius: BorderRadius.circular(40),
-                      color: ColorConstant.buttonColor
-                  ),
+                      ),
                   child: Center(
                       child: Text(StringConstant.save,
-                        style: TextStyles.boldText()
-                      )),
+                          style: TextStyles.boldText())),
                 ),
               )
             ],

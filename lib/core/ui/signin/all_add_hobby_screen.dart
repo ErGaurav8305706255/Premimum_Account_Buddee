@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
@@ -48,14 +47,14 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                         fontWeight: FontWeight.w500),
                   ),
                 ),
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: Row(
                     children: [
                       Expanded(
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(9, 4, 10, 4),
+                          padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                           height: 32,width: 152,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
@@ -64,16 +63,16 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                           child: Row(
                             children: [
                               Text(StringConstant.badminton,style: TextStyles.tabTextFont),
-                              Spacer(),
+                              const Spacer(),
                               SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                             ],
                           ),
                         ),
                       ),
-                      SizedBox(width: 7),
+                      const SizedBox(width: 7),
                       Expanded(
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(9, 4, 10, 4),
+                          padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                           height: 32,width: 152,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
@@ -82,7 +81,7 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                           child: Row(
                             children: [
                               Text(StringConstant.photography,style: TextStyles.tabTextFont),
-                              Spacer(),
+                              const Spacer(),
                               SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                             ],
                           ),
@@ -91,13 +90,13 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                     ],
                   ),
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.fromLTRB(9, 4, 10, 4),
+                        padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                         height: 32,width: 145,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
@@ -106,18 +105,18 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                         child: Row(
                           children: [
                             Text(StringConstant.surfing,style: TextStyles.tabTextFont),
-                            Spacer(),
+                            const Spacer(),
                             SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                           ],
                         ),
                       ),
-                      SizedBox(width: 7),
-                      SizedBox(),
+                      const SizedBox(width: 7),
+                      const SizedBox(),
                     ],
                   ),
                 ),
 
-                SizedBox(height: 340),
+                const SizedBox(height: 340),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: InkWell(
@@ -126,12 +125,12 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                       height: 58,width: 311,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
-                          border: Border.all(color: ColorConstant.buttonColor,width: 1.5),
+                          border: Border.all(color: ColorConstant.buttonColor2,width: 1.5),
                           color: ColorConstant.transparent
                       ),
                       child: Center(
                         child: Text(StringConstant.nextStep,
-                          style: TextStyles.semiBoldText(fontSize: 16,fontWeight: FontWeight.w600,color: ColorConstant.buttonColor),
+                          style: TextStyles.semiBoldText(fontSize: 16,fontWeight: FontWeight.w600,color: ColorConstant.buttonColor2),
                         ),
                       ),
                     ),

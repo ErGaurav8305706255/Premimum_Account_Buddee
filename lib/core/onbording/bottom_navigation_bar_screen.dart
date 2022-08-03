@@ -16,11 +16,11 @@ class _BottomNavigatorBarScreenState extends State<BottomNavigatorBarScreen> {
 
 
   int _selectedIndex = 0;
-  static List<Widget> _WidgetOption = <Widget>[
-    ExploreScreen(),
-    LikedScreen(),
-    MessagesScreen(),
-    ProfileIntroScreen()
+  static final List<Widget> _widgetOption = <Widget>[
+    const ExploreScreen(),
+    const LikedScreen(),
+    const MessagesScreen(),
+    const ProfileIntroScreen()
   ];
 
   void _onItemTapped(int index){
@@ -34,35 +34,35 @@ class _BottomNavigatorBarScreenState extends State<BottomNavigatorBarScreen> {
     return SafeArea(
       child: Scaffold(
         body: Center(
-          child: _WidgetOption.elementAt(_selectedIndex),
+          child: _widgetOption.elementAt(_selectedIndex),
         ),
         bottomNavigationBar: BottomNavigationBar(
           showSelectedLabels: false,
           showUnselectedLabels: false,
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.explore_sharp),
+                icon: const Icon(Icons.explore_sharp),
                 label: '',
                 backgroundColor: ColorConstant.white
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.thumb_up),
+                icon: const Icon(Icons.thumb_up),
                 label: '',
                 backgroundColor: ColorConstant.white
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.wechat),
+                icon: const Icon(Icons.wechat),
                 label: '',
                 backgroundColor: ColorConstant.white
             ),
             BottomNavigationBarItem(
-                icon: Icon(Icons.person),
+                icon: const Icon(Icons.person),
                 label: '',
                 backgroundColor: ColorConstant.white
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: ColorConstant.buttonColor,
+          selectedItemColor: ColorConstant.buttonColor2,
           unselectedItemColor: ColorConstant.gray,
           onTap: _onItemTapped,
         ),

@@ -3,6 +3,7 @@ import 'dart:core';
 class StringConstant{
   static String createAccount = "CREATE ACCOUNT";
   static String signIn = "SIGN IN";
+  static String orWith = "Or with";
   static String whatEver = "Whatever your hobby, find your Buddee";
   static String london = "London";
   static String myHobbies = "My Hobbies";
@@ -95,12 +96,24 @@ class StringConstant{
   static String inga = "Inga, 24";
   static String jes = "Jes, 28";
   static String jeanny = "Jeanny, 20";
-  static String harry = "Harry";
+  static String harry = "Harry, 32";
   static String messages = "Messages";
-  static String millie = "Millie";
+  static String millie = "Millie, 24";
   static String haveYouEver = "Have you ever played any tournam..";
   static String iamBased = "I'm based in Fulham, yourself?";
   static String hahaYep = "Haha yep i'm exactly the same..";
+  static String annWithoutAge = "Ann";
+  static String ingaWithoutAge = "Inga";
+  static String jesWithoutAge = "Jes";
+  static String jeannyWithoutAge = "Jeanny";
+  static String harryWithoutAge = "Harry";
+  static String millieWithoutAge = "Millie";
+  static String annTime = "12:32 AM";
+  static String ingaTime = "12:32 AM";
+  static String jesTime = "12:22 AM";
+  static String jeannyTime = "12:12 AM";
+  static String harryTime = "12:10 AM";
+  static String millieTime = "12:05 AM";
 
 
 

@@ -6,7 +6,6 @@ import 'package:premium_account_buddee/core/constant/text_style.dart';
 
 import '../../../router.dart';
 import '../../constant/image_constant.dart';
-import 'add_hobbies_search_screen.dart';
 class AddHobbyListSearchScreen extends StatefulWidget {
   const AddHobbyListSearchScreen({Key? key}) : super(key: key);
 

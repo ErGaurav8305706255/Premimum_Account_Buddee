@@ -62,20 +62,20 @@ class _GalleryScreenState extends State<GalleryScreen> {
                     Navigator.pop(context);
                   },
                       child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
-                  Spacer(),
-                  SizedBox()
+                  const Spacer(),
+                  const SizedBox()
                 ],
               ),
-              SizedBox(height: 36),
+              const SizedBox(height: 36),
               Text(
                   StringConstant.gallery,
                   style: TextStyles.headTextFont),
-              SizedBox(height: 42),
+              const SizedBox(height: 42),
               SizedBox(
                 height: 300,
                 child: GridView.builder(
                     itemCount: items.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         mainAxisSpacing: 8,
                         crossAxisSpacing: 8,
@@ -97,13 +97,18 @@ class _GalleryScreenState extends State<GalleryScreen> {
                     }
                 ),
               ),
-              SizedBox(height: 188),
+              const SizedBox(height: 188),
               InkWell(
                 onTap: () => Navigator.pushNamed(context, Routes.profileIntroScreen),
                 child: Container(height: 50,
                   decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                        colors: [
+                          ColorConstant.buttonColor1,
+                          ColorConstant.buttonColor2
+                        ]
+                    ),
                       borderRadius: BorderRadius.circular(40),
-                      color: ColorConstant.buttonColor
                   ),
                   child: Center(
                       child: Text(StringConstant.save,

@@ -1,5 +1,4 @@
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:premium_account_buddee/core/constant/color_constant.dart';
@@ -66,12 +65,12 @@ class _ExploreScreenState extends State<ExploreScreen> {
                   Row(
                     children: [
                       Text(StringConstant.buddee,style: TextStyles.headTextFont),
-                      Spacer(),
+                      const Spacer(),
                       InkWell(onTap: () => Navigator.pushNamed(context, Routes.filterScreen),
                           child: SvgPicture.asset(ImageConstant.filterSvg,height: 24,width: 26,fit: BoxFit.cover,))
                     ],
                   ),
-                  SizedBox(height: 23),
+                  const SizedBox(height: 23),
                   Stack(
                     children:[
                       Container(
@@ -95,7 +94,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                           items: item.map((items){
                             return Builder(builder: (BuildContext context) {
                               return Container(
-                                margin: EdgeInsets.all(3),
+                                margin: const EdgeInsets.all(3),
                                 child: ClipRRect(
                                     borderRadius: BorderRadius.circular(10),
                                     child: Image.asset(items['url'],
@@ -121,12 +120,17 @@ class _ExploreScreenState extends State<ExploreScreen> {
                               Text(StringConstant.tom,style: TextStyles.boldText(
                                   fontSize: 26
                               ),),
-                              SizedBox(width: 11),
+                              const SizedBox(width: 11),
                               Container(
-                                padding: EdgeInsets.all(6),
+                                padding: const EdgeInsets.all(6),
                                 height: 27,width: 35,
                                 decoration: BoxDecoration(
-                                    color: ColorConstant.buttonColor,
+                                    gradient: LinearGradient(
+                                        colors: [
+                                          ColorConstant.buttonColor1,
+                                          ColorConstant.buttonColor2
+                                        ]
+                                    ),
                                     borderRadius: BorderRadius.circular(20)
                                 ),
                                 child: SvgPicture.asset(ImageConstant.diamondSvg,height: 15,width: 16),
@@ -138,7 +142,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                           child: Row(
                             children: [
                               SvgPicture.asset(ImageConstant.arrowSvg),
-                              SizedBox(width: 8),
+                              const SizedBox(width: 8),
                               Text(StringConstant.away,
                                 style: TextStyles.regularText(
                                     color: ColorConstant.white
@@ -150,13 +154,13 @@ class _ExploreScreenState extends State<ExploreScreen> {
                           child: Row(
                             children: [
                               SvgPicture.asset(ImageConstant.canclSvg, height: 120,width: 120,fit: BoxFit.cover),
-                              SizedBox(width: 10),
+                              const SizedBox(width: 10),
                               SvgPicture.asset(ImageConstant.ritSignSvg, height: 120,width: 120,fit: BoxFit.cover),
                             ],
                           ))
                     ]
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Row(
                     children: [
                       Text(StringConstant.youGot,
@@ -168,8 +172,13 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       Container(
                         height: 27,width: 95,
                         decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                              colors: [
+                                ColorConstant.buttonColor1,
+                                ColorConstant.buttonColor2
+                              ]
+                          ),
                             borderRadius: BorderRadius.circular(30),
-                            color: ColorConstant.buttonColor
                         ),
                         child: Padding(
                           padding: const EdgeInsets.all(5.0),
@@ -185,8 +194,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       )
                     ],
                   ),
-                  SizedBox(height: 16),
-                  Container(
+                  const SizedBox(height: 16),
+                  SizedBox(
                       height: 40,
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
@@ -194,8 +203,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
                           itemBuilder: (context, index) {
                             return Container(
                               height: 29,
-                              padding: EdgeInsets.symmetric(horizontal: 15,vertical: 1),
-                              margin: EdgeInsets.all(5),
+                              padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 1),
+                              margin: const EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(30),
                                   color: ColorConstant.backGroundColor
@@ -205,7 +214,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                               ),)),
                             );
                           })),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   CarouselSlider(
                     options: CarouselOptions(
                       onPageChanged: (index, reason) {
@@ -222,14 +231,14 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     items: item.map((items){
                       return Builder(builder: (BuildContext context){
                         return Container(
-                          padding: EdgeInsets.all(16),
+                          padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
                                   width: 1,color: ColorConstant.lightIndicatorColor
                               )
                           ),
-                          margin: EdgeInsets.all(3),
+                          margin: const EdgeInsets.all(3),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -237,7 +246,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                   color: ColorConstant.backGroundColor,
                                   fontWeight: FontWeight.w600
                               ),),
-                              SizedBox(height: 16),
+                              const SizedBox(height: 16),
                               Text(items['subtitle'],style: TextStyles.regularText(),)
                             ],
                           ),
@@ -245,7 +254,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                       });
                     }).toList(),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -253,13 +262,13 @@ class _ExploreScreenState extends State<ExploreScreen> {
                         buildIndicator2(currentIndex2 == i)
                     ],
                   ),
-                  SizedBox(height: 17),
+                  const SizedBox(height: 17),
                   Text(StringConstant.tomOtherHobbies,
                     style: TextStyles.regularText(
                         fontWeight: FontWeight.w600,fontSize: 15
                     ),),
-                  SizedBox(height: 13),
-                  Container(
+                  const SizedBox(height: 13),
+                  SizedBox(
                       height: 40,
                       child: ListView.builder(
                           scrollDirection: Axis.horizontal,
@@ -267,8 +276,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
                           itemBuilder: (context, index) {
                             return Container(
                               height: 29,
-                              padding: EdgeInsets.symmetric(horizontal: 15,vertical: 1),
-                              margin: EdgeInsets.all(5),
+                              padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 1),
+                              margin: const EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
                                   border: Border.all(color: ColorConstant.buttonBorderColor,width: 1)
@@ -279,9 +288,9 @@ class _ExploreScreenState extends State<ExploreScreen> {
                                 ),)),
                             );
                           })),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Container(
-                    padding: EdgeInsets.all(16),
+                    padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(width: 1,
@@ -290,7 +299,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                     child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(StringConstant.astronomy,style: TextStyles.tabTextFont),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         Text(StringConstant.astronomyIsTheStudy,style: TextStyles.normalFont,)
                       ],
                     ),

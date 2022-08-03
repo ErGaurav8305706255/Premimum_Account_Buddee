@@ -51,61 +51,61 @@ class _ProfileMainScreenState extends State<ProfileMainScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),
                   child: Column(
                     children: [
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Row(
                         children: [
                           InkWell(onTap: () {
                             Navigator.pop(context);
                           },
                               child: SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover),),
-                          SizedBox(width: 30),
+                          const SizedBox(width: 30),
                           Text(StringConstant.myProfile,
                               style: TextStyles.menuTextFont),
-                          Spacer(),
+                          const Spacer(),
                           SvgPicture.asset(ImageConstant.closeSvg,height: 24,width: 24,fit: BoxFit.cover,)
                         ],
                       ),
-                      SizedBox(height: 170),
+                      const SizedBox(height: 170),
                       Row(
                         children: [
                           Text(StringConstant.information,
                               style: TextStyles.menuTextFont
                           ),
-                          Spacer(),
+                          const Spacer(),
                           InkWell(
                               onTap: () => Navigator.pushNamed(context, Routes.informationScreen),
                               child: SvgPicture.asset(ImageConstant.nxtButtonSvg,height: 35,width: 35,fit: BoxFit.cover,))
                         ],
                       ),
-                      SizedBox(height: 50),
+                      const SizedBox(height: 50),
                       Row(
                         children: [
                           Text(StringConstant.hobbies,
                               style: TextStyles.menuTextFont
                           ),
-                          Spacer(),
+                          const Spacer(),
                           InkWell(onTap: () => Navigator.pushNamed(context, Routes.hobbiesScreen),
                               child: SvgPicture.asset(ImageConstant.nxtButtonSvg,height: 35,width: 35,fit: BoxFit.cover,))
                         ],
                       ),
-                      SizedBox(height: 50),
+                      const SizedBox(height: 50),
                       Row(
                         children: [
                           Text(StringConstant.searchSettings,
                               style: TextStyles.menuTextFont
                           ),
-                          Spacer(),
+                          const Spacer(),
                           InkWell(onTap: () => Navigator.pushNamed(context, Routes.searchSettingScreen),
                               child: SvgPicture.asset(ImageConstant.nxtButtonSvg,height: 35,width: 35,fit: BoxFit.cover,))
                         ],
                       ),
-                      SizedBox(height: 50),
+                      const SizedBox(height: 50),
                       Row(
                         children: [
                           Text(StringConstant.privacyPolicy,
                               style: TextStyles.menuTextFont
                           ),
-                          Spacer(),
+                          const Spacer(),
                           InkWell(onTap: () => Navigator.pushNamed(context, Routes.privacyPolicyScreen),
                               child: SvgPicture.asset(ImageConstant.nxtButtonSvg,height: 35,width: 35,fit: BoxFit.cover,))
                         ],

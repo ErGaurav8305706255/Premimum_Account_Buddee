@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
@@ -13,6 +11,8 @@ class MultiPhotoScreen extends StatefulWidget {
 }
 
 class _MultiPhotoScreenState extends State<MultiPhotoScreen> {
+
+
   final List items = [
     {
       'image': 'assets/images/persn.png',
@@ -60,20 +60,20 @@ class _MultiPhotoScreenState extends State<MultiPhotoScreen> {
                     Navigator.pop(context);
                   },
                       child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
-                  Spacer(),
-                  SizedBox()
+                  const Spacer(),
+                  const SizedBox()
                 ],
               ),
-              SizedBox(height: 36),
+              const SizedBox(height: 36),
               Text(
                   StringConstant.addPhoto,
                   style: TextStyles.headTextFont),
-              SizedBox(height: 42),
+              const SizedBox(height: 42),
               SizedBox(
                 height: 300,
                 child: GridView.builder(
                     itemCount: items.length,
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         mainAxisSpacing: 8,
                         crossAxisSpacing: 8,
@@ -93,10 +93,10 @@ class _MultiPhotoScreenState extends State<MultiPhotoScreen> {
                     }
                     ),
               ),
-              SizedBox(height: 96),
+              const SizedBox(height: 96),
               Text(StringConstant.youCanSet,style: TextStyles.lightText(fontWeight: FontWeight.w500)
               ),
-              SizedBox(height: 24),
+              const SizedBox(height: 24),
               Row(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   InkWell(onTap: () {
@@ -109,7 +109,7 @@ class _MultiPhotoScreenState extends State<MultiPhotoScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(width: 53),
+                  const SizedBox(width: 53),
                   InkWell(onTap: () {
                     Navigator.pop(context);
                   },

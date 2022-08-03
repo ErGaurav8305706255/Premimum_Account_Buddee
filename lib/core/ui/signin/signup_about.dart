@@ -6,7 +6,6 @@ import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
-import 'add_hobby_list_search_screen.dart';
 class SignUpAbout extends StatefulWidget {
   const SignUpAbout({Key? key}) : super(key: key);
 
@@ -131,12 +130,12 @@ class _SignUpAboutState extends State<SignUpAbout> {
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
                           color: ColorConstant.transparent,
-                        border: Border.all(color: ColorConstant.buttonColor,width: 1)
+                        border: Border.all(color: ColorConstant.buttonColor2,width: 1)
                       ),
                       child: Center(
                           child: Text(StringConstant.nextStep,
                               style: TextStyles.boldText(
-                                  color: ColorConstant.buttonColor,fontSize: 16
+                                  color: ColorConstant.buttonColor2,fontSize: 16
                               )
                           )),
                     ),

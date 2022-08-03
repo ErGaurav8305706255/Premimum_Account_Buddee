@@ -30,24 +30,24 @@ class _InformationScreenState extends State<InformationScreen> {
                         Navigator.pop(context);
                       },
                           child:  SvgPicture.asset(ImageConstant.backArrow,height: 16,width: 9, fit: BoxFit.cover),),
-                      SizedBox(width: 30),
+                      const SizedBox(width: 30),
                       Text(StringConstant.myProfile,
                         style: TextStyles.menuTextFont
                       ),
-                      Spacer(),
-                      SizedBox(),
+                      const Spacer(),
+                      const SizedBox(),
                     ],
                   ),
-                  SizedBox(height: 50),
+                  const SizedBox(height: 50),
                   Center(
                     child: Text(StringConstant.information,
                       style: TextStyles.headTextFont)
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Text(StringConstant.name,
                       style: TextStyles.regularText()
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   TextField(
                     decoration: InputDecoration(
                         hintText: StringConstant.name,
@@ -62,11 +62,11 @@ class _InformationScreenState extends State<InformationScreen> {
                         )
                     ),
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Text(StringConstant.dob,
                       style: TextStyles.regularText()
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   TextField(
                     decoration: InputDecoration(
                         hintText: StringConstant.dob,
@@ -81,13 +81,13 @@ class _InformationScreenState extends State<InformationScreen> {
                         )
                     ),
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Text(StringConstant.gender,
                       style: TextStyles.regularText()
                   ),
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
                   Container(
-                    padding: EdgeInsets.all(5),
+                    padding: const EdgeInsets.all(5),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(color: ColorConstant.gray,width: 1)
@@ -99,7 +99,7 @@ class _InformationScreenState extends State<InformationScreen> {
                         ),
                         indicatorColor: ColorConstant.transparent,
                         labelColor: ColorConstant.textColor,
-                        labelStyle: TextStyle(
+                        labelStyle: const TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold,
                         ),
@@ -121,15 +121,20 @@ class _InformationScreenState extends State<InformationScreen> {
                         ]),
                   ),
 
-                  SizedBox(height: 173),
+                  const SizedBox(height: 173),
                   InkWell(onTap: () {
                     // Navigator.push(context, MaterialPageRoute(builder: (context) => MainProfileScreen()));
                   },
                     child: Container(
-                      padding: EdgeInsets.all(15),
+                      padding: const EdgeInsets.all(15),
                       decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [
+                              ColorConstant.buttonColor1,
+                              ColorConstant.buttonColor2
+                            ]
+                        ),
                           borderRadius: BorderRadius.circular(30),
-                          color: ColorConstant.buttonColor
                       ),
                       child: Center(child: Text(StringConstant.save,
                         style: TextStyle(

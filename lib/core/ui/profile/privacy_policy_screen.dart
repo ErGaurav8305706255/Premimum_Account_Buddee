@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
@@ -26,21 +25,21 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
                       Navigator.pop(context);
                     },
                         child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
-                    SizedBox(width: 30),
+                    const SizedBox(width: 30),
                     Text(StringConstant.privacyPolicy,
                         style: TextStyles.menuTextFont
                     ),
-                    Spacer(),
-                    SizedBox(),
+                    const Spacer(),
+                    const SizedBox(),
                   ],
                 ),
-                SizedBox(height: 41,),
+                const SizedBox(height: 41,),
                 Text(StringConstant.effective,style: TextStyles.normalFont),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Text(StringConstant.viewPrevious,style: TextStyles.normalFont),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Text(StringConstant.ourPreviousPolicy,style: TextStyles.normalFont),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Text(StringConstant.thisPrivacy,style: TextStyles.normalFont),
               ],
             ),

@@ -1,8 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
-import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
@@ -32,7 +29,7 @@ class _HobbiesScreenState extends State<HobbiesScreen> {
                     const SizedBox(width: 30),
                     Text(StringConstant.myProfile,style: TextStyles.menuTextFont,),
                     const Spacer(),
-                    SizedBox(),
+                    const SizedBox(),
                   ],
                 ),
                 const SizedBox(height: 36),
@@ -48,11 +45,11 @@ class _HobbiesScreenState extends State<HobbiesScreen> {
                         fontWeight: FontWeight.w500),
                   ),
                 ),
-                SizedBox(height: 24),
+                const SizedBox(height: 24),
                 Row(
                   children: [
                     Container(
-                      padding: EdgeInsets.fromLTRB(9, 4, 10, 4),
+                      padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                       height: 32,width: 152,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
@@ -60,16 +57,16 @@ class _HobbiesScreenState extends State<HobbiesScreen> {
                       ),
                       child: Text(StringConstant.badminton,style: TextStyles.tabTextFont),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     SvgPicture.asset(ImageConstant.editSvg,height: 24,width: 24,fit: BoxFit.cover),
                     // Image.asset(ImageConstant.edit,width: 19,height: 19.38,fit: BoxFit.cover),
-                    SizedBox(width: 13),
+                    const SizedBox(width: 13),
                     SvgPicture.asset(ImageConstant.crossSvg,height: 24,width: 24,fit: BoxFit.cover)
                   ],
                 ),
-                SizedBox(height: 16),
+                const SizedBox(height: 16),
                 Text(StringConstant.intermediate,style: TextStyles.regularText(),),
-                Spacer(),
+                const Spacer(),
                 InkWell(
                   // onTap: () => Navigator.pushNamed(context, Routes.multiSelectedHobbyScreen),
                   child: Container(
@@ -86,14 +83,19 @@ class _HobbiesScreenState extends State<HobbiesScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                const SizedBox(height: 20),
                 InkWell(
                   // onTap: () => Navigator.pushNamed(context, Routes.allAddHobbyScreen),
                   child: Container(
                     height: 58,width: 311,
                     decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: [
+                            ColorConstant.buttonColor1,
+                            ColorConstant.buttonColor2
+                          ]
+                      ),
                         borderRadius: BorderRadius.circular(30),
-                        color: ColorConstant.buttonColor
                     ),
                     child: Center(
                       child: Text(StringConstant.save,

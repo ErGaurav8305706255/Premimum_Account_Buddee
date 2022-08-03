@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:premium_account_buddee/core/constant/image_constant.dart';
@@ -7,7 +6,6 @@ import '../../../router.dart';
 import '../../constant/color_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
-import 'add_new_hobbies.dart';
 class AddHobbiesSearchScreen extends StatefulWidget {
   const AddHobbiesSearchScreen({Key? key}) : super(key: key);
 
@@ -70,7 +68,7 @@ class _AddHobbiesSearchScreenState extends State<AddHobbiesSearchScreen> {
                   child: Row(
                     children: [
                       Container(
-                        padding: EdgeInsets.fromLTRB(9, 4, 9, 4),
+                        padding: const EdgeInsets.fromLTRB(9, 4, 9, 4),
                         height: 32,width: 152,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
@@ -78,17 +76,17 @@ class _AddHobbiesSearchScreenState extends State<AddHobbiesSearchScreen> {
                         ),
                         child: Text(StringConstant.badminton,style: TextStyles.tabTextFont),
                       ),
-                      Spacer(),
-                      Icon(Icons.cancel_outlined)
+                      const Spacer(),
+                      const Icon(Icons.cancel_outlined)
                     ],
                   ),
                 ),
-                SizedBox(height: 32),
+                const SizedBox(height: 32),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: Text(StringConstant.lookingFor,style: TextStyles.normalFont),
                 ),
-                SizedBox(height: 8),
+                const SizedBox(height: 8),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: TextFormField(
@@ -106,7 +104,7 @@ class _AddHobbiesSearchScreenState extends State<AddHobbiesSearchScreen> {
                     ),
                   ),
                 ),
-                SizedBox(height: 181),
+                const SizedBox(height: 181),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 32),
                   child: InkWell(
@@ -114,8 +112,13 @@ class _AddHobbiesSearchScreenState extends State<AddHobbiesSearchScreen> {
                     child: Container(
                       height: 58,width: 311,
                       decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [
+                              ColorConstant.buttonColor1,
+                              ColorConstant.buttonColor2
+                            ]
+                        ),
                           borderRadius: BorderRadius.circular(30),
-                          color: ColorConstant.buttonColor
                       ),
                       child: Center(
                         child: Text(StringConstant.save,

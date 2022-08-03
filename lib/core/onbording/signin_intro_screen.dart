@@ -5,8 +5,6 @@ import '../../router.dart';
 import '../constant/color_constant.dart';
 import '../constant/image_constant.dart';
 import '../constant/string_constant.dart';
-import '../ui/signin/signin_screen.dart';
-import '../ui/signin/signup_about.dart';
 
 
 
@@ -46,8 +44,13 @@ class _SignInIntroScreenState extends State<SignInIntroScreen> {
                       height: 58,
                       width: 311,
                       decoration: BoxDecoration(
-                        color: ColorConstant.buttonColor,
-                        borderRadius: BorderRadius.circular(30)
+                          gradient: LinearGradient(
+                              colors: [
+                                ColorConstant.buttonColor1,
+                                ColorConstant.buttonColor2
+                              ]
+                          ),
+                          borderRadius: BorderRadius.circular(30)
                       ),
                       child: Center(
                         child: Text(StringConstant.createAccount,

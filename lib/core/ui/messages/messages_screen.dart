@@ -1,10 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:premium_account_buddee/core/constant/color_constant.dart';
 
 import '../../constant/image_constant.dart';
 import '../../constant/string_constant.dart';
 import '../../constant/text_style.dart';
+
 class MessagesScreen extends StatefulWidget {
   const MessagesScreen({Key? key}) : super(key: key);
 
@@ -13,43 +14,48 @@ class MessagesScreen extends StatefulWidget {
 }
 
 class _MessagesScreenState extends State<MessagesScreen> {
-
   final List data = [
     {
-      'title': StringConstant.all,
+      'title': StringConstant.annWithoutAge,
       'image': ImageConstant.img5,
-      'subtitle': StringConstant.ann,
+      'subtitle': StringConstant.haveYouEver,
       'hobbies': StringConstant.chess,
+      'time': StringConstant.annTime,
     },
     {
-      'title': StringConstant.badminton,
+      'title': StringConstant.ingaWithoutAge,
       'image': ImageConstant.img6,
-      'subtitle': StringConstant.inga,
+      'subtitle': StringConstant.iamBased,
       'hobbies': StringConstant.photography,
+      'time': StringConstant.ingaTime,
     },
     {
-      'title': StringConstant.photography,
+      'title': StringConstant.jesWithoutAge,
       'image': ImageConstant.img7,
-      'subtitle': StringConstant.jes,
+      'subtitle': StringConstant.hahaYep,
       'hobbies': StringConstant.tennis,
+      'time': StringConstant.jesTime,
     },
     {
-      'title': StringConstant.astronomy,
+      'title': StringConstant.jeannyWithoutAge,
       'image': ImageConstant.img8,
-      'subtitle': StringConstant.jeanny,
+      'subtitle': StringConstant.haveYouEver,
       'hobbies': StringConstant.yoga,
+      'time': StringConstant.jeannyTime,
     },
     {
-      'title': StringConstant.tennis,
+      'title': StringConstant.harryWithoutAge,
       'image': ImageConstant.img9,
-      'subtitle': StringConstant.harry,
+      'subtitle': StringConstant.iamBased,
       'hobbies': StringConstant.golf,
+      'time': StringConstant.harryTime,
     },
     {
-      'title': StringConstant.tennis,
+      'title': StringConstant.millieWithoutAge,
       'image': ImageConstant.img10,
-      'subtitle': StringConstant.millie,
+      'subtitle': StringConstant.hahaYep,
       'hobbies': StringConstant.music,
+      'time': StringConstant.millieTime,
     },
   ];
 
@@ -63,44 +69,128 @@ class _MessagesScreenState extends State<MessagesScreen> {
               children: [
                 Row(
                   children: [
-                    InkWell(onTap: () {
-                      Navigator.pop(context);
-                    },
-                        child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
-                    SizedBox(width: 30),
-                    Text(StringConstant.messages,
-                        style: TextStyles.menuTextFont
-                    ),
-                    Spacer(),
-                   SizedBox(),
+                    InkWell(
+                        onTap: () {
+                          Navigator.pop(context);
+                          },
+                        child: SvgPicture.asset(
+                          ImageConstant.backArrow,
+                          height: 15.86,
+                          width: 8.89,
+                          fit: BoxFit.cover,
+                        )),
+                    const SizedBox(width: 30),
+                    Text(StringConstant.messages, style: TextStyles.menuTextFont),
+                    const Spacer(),
+                    const SizedBox(),
                   ],
                 ),
-                SizedBox(height: 26),
-                Container(
-                  height: 140,
+                const SizedBox(height: 26),
+                SizedBox(
+                    height: 80,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: data.length,
+                        itemBuilder: (context, index) {
+                          return Column(
+                            children: [
+                              Container(
+                                margin: const EdgeInsets.symmetric(horizontal: 17),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(40),
+                                  child: Image.asset(data[index]['image'],
+                                      height: 56, width: 56, fit: BoxFit.cover),
+                                ),
+                              ),
+                              const SizedBox(height: 5),
+                              Text(
+                                data[index]['title'],
+                                style: TextStyles.regularText(
+                                    fontWeight: FontWeight.w500),
+                              )
+                            ],
+                          );
+                        })),
+                const SizedBox(height: 24),
+                Expanded(
                   child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
+                      scrollDirection: Axis.vertical,
                       itemCount: data.length,
                       itemBuilder: (context, index) {
-                    return Column(
-                      children: [
-                        Container(
-                          margin: EdgeInsets.all(5),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(100),
-                            child: Image.asset(data[index]['image'],
-                                height: 100,width: 100,
-                                fit: BoxFit.cover
-                            ),
+                        return Container(
+                          margin: const EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.all(16),
+                          height: 128,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: ColorConstant.lightIndicatorColor),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Container(
+                                height: 24,
+                                width: 100,
+                                decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(5),
+                                    color: ColorConstant.backGroundColor),
+                                child: Center(
+                                  child: Text(
+                                    data[index]['hobbies'],
+                                    style: TextStyles.regularText(
+                                        fontSize: 12, fontWeight: FontWeight.w500),
+                                  ),
+                                ),
+                              ),
+                              const SizedBox(height: 16),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(40),
+                                    child: Image.asset(
+                                      data[index]['image'],
+                                      height: 56,
+                                      width: 56,
+                                      fit: BoxFit.cover,
+                                    ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            Text(
+                                              data[index]['title'],
+                                              style: TextStyles.regularText(
+                                                fontWeight: FontWeight.w500,
+                                              ),
+                                            ),
+                                            Text(
+                                              data[index]['time'],
+                                              style: TextStyles.mediumText(
+                                                  fontSize: 10),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 8),
+                                        Text(
+                                          data[index]['subtitle'],
+                                          style: TextStyles.mediumText(),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
                           ),
-                        ),
-                        SizedBox(height: 5),
-                        Text(data[index]['subtitle'],style: TextStyles.regularText(
-                          fontWeight: FontWeight.w500
-                        ),)
-                      ],
-                    );
-                  })),
+                        );
+                      }),
+                ),
               ],
             ),
           ),

@@ -23,7 +23,7 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
           child: Stack(
             children: [
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 16,vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 5),
                 width: double.infinity,
                 decoration: BoxDecoration(
                   color: ColorConstant.white,
@@ -32,14 +32,14 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(height: 385),
+                    const SizedBox(height: 385),
                     Center(
                         child: Text(StringConstant.myHobbies,
                           style: TextStyles.regularText(
                             fontSize: 21,
                             fontWeight: FontWeight.w500
                           ))),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     Container(
                         height: 32,width: 152,
                         decoration: BoxDecoration(
@@ -47,15 +47,15 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                             borderRadius: BorderRadius.circular(10)
                         ),
                         child: Center(child: Text(StringConstant.badminton,style: TextStyles.tabTextFont,))),
-                    SizedBox(height: 24),
+                    const SizedBox(height: 24),
                     Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16,vertical: 16),
+                        padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 16),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: ColorConstant.lightBackGroundColor
                         ),
                         child: Text(StringConstant.intermediate)),
-                    SizedBox(height: 52),
+                    const SizedBox(height: 52),
                     Container(
                         height: 32,width: 152,
                         decoration: BoxDecoration(
@@ -65,9 +65,9 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                         child: Center(child: Text(StringConstant.photography,
                           style: TextStyles.tabTextFont
                         ))),
-                    SizedBox(height: 24),
+                    const SizedBox(height: 24),
                     Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16,vertical: 16),
+                        padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 16),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: ColorConstant.lightBackGroundColor
@@ -77,7 +77,7 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                             color: ColorConstant.textColor,
                           ),
                         )),
-                    SizedBox(height: 52),
+                    const SizedBox(height: 52),
                     Container(
                         height: 32,width: 152,
                         decoration: BoxDecoration(
@@ -87,9 +87,9 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                         child: Center(child: Text(StringConstant.gallery,
                           style: TextStyles.tabTextFont
                         ))),
-                    SizedBox(height: 24),
+                    const SizedBox(height: 24),
                     Container(
-                        padding: EdgeInsets.symmetric(horizontal: 16,vertical: 16),
+                        padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 16),
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
                             color: ColorConstant.lightBackGroundColor
@@ -107,7 +107,7 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                 edge: Edge.BOTTOM,
                 height: 50,
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 20,vertical: 32),
+                  padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 32),
                   height: 370,
                   decoration: BoxDecoration(
                     color: ColorConstant.backGroundColor,
@@ -120,39 +120,44 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                           Text(StringConstant.myProfile,style: TextStyles.regularText(
                             fontSize: 20,fontWeight: FontWeight.w500
                           )),
-                          Spacer(),
+                          const Spacer(),
                           InkWell(onTap: () => Navigator.pushNamed(context, Routes.profileMainScreen),
                               child: SvgPicture.asset(ImageConstant.menuButtonSvg,height: 32,width: 32,fit: BoxFit.cover,))
                         ],
                       ),
-                      SizedBox(height: 180),
+                      const SizedBox(height: 180),
                       Text(StringConstant.james,
                           style: TextStyles.boldText(
                             fontWeight: FontWeight.w500
                           )),
-                      SizedBox(height: 8),
+                      const SizedBox(height: 8),
                       Row(mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           SvgPicture.asset(ImageConstant.locationSvg,height: 15,width: 12,fit: BoxFit.cover,),
-                          SizedBox(width: 6),
+                          const SizedBox(width: 6),
                           Text(StringConstant.london,
                               style: TextStyles.mediumText(
                                 color: ColorConstant.buttonBorderColor
                               )),
                         ],
                       ),
-                      SizedBox(height: 16),
+                      const SizedBox(height: 16),
                       Container(
                           width: 101,height: 27,
-                          padding: EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
                           decoration: BoxDecoration(
-                              color: ColorConstant.buttonColor,
+                              gradient: LinearGradient(
+                                  colors: [
+                                    ColorConstant.buttonColor1,
+                                    ColorConstant.buttonColor2
+                                  ]
+                              ),
                               borderRadius: BorderRadius.circular(20)
                           ),
                           child: Row(
                             children: [
                               SvgPicture.asset(ImageConstant.diamondSvg,height: 15,width: 16,fit: BoxFit.cover,),
-                              SizedBox(width: 6),
+                              const SizedBox(width: 6),
                               Text(StringConstant.premium,style: TextStyles.boldText(
                                 fontSize: 14,fontWeight: FontWeight.w400
                               )),
@@ -176,7 +181,7 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                   top: 186,
                   left: 221,
                   child: InkWell(onTap: () => Navigator.pushNamed(context, Routes.galleryScreen),
-                    child: Container(padding: EdgeInsets.all(8),
+                    child: Container(padding: const EdgeInsets.all(8),
                       height: 32,
                       width: 32,
                       decoration: BoxDecoration(color: ColorConstant.buttonBorderColor,

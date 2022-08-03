@@ -18,9 +18,9 @@ class _FilterScreenState extends State<FilterScreen> {
   double _currentSliderValue1 = 10;
   double _currentSliderValue2 = 10;
   double _currentSliderValue3 = 10;
-  RangeValues values1 = RangeValues(10,50);
-  RangeValues values2 = RangeValues(10,50);
-  RangeValues values3 = RangeValues(10,50);
+  RangeValues values1 = const RangeValues(10,50);
+  RangeValues values2 = const RangeValues(10,50);
+  RangeValues values3 = const RangeValues(10,50);
 
 
   @override
@@ -39,19 +39,19 @@ class _FilterScreenState extends State<FilterScreen> {
                         Navigator.pop(context);
                       },
                           child: SvgPicture.asset(ImageConstant.backArrow,height: 15.86,width: 8.89,fit: BoxFit.cover,)),
-                      SizedBox(width: 30),
+                      const SizedBox(width: 30),
                       Text(StringConstant.myProfile,
                           style: TextStyles.menuTextFont
                       ),
-                      Spacer(),
-                      SizedBox(),
+                      const Spacer(),
+                      const SizedBox(),
                     ],
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   Center(child: Text(StringConstant.searchSetting,style: TextStyles.headTextFont)),
-                  SizedBox(height: 21),
+                  const SizedBox(height: 21),
                   Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         border: Border.all(width: 1,color: ColorConstant.gray,)
@@ -62,7 +62,7 @@ class _FilterScreenState extends State<FilterScreen> {
                             style: TextStyles.regularText(
                                 fontWeight: FontWeight.w500
                             )),
-                        SizedBox(height: 16),
+                        const SizedBox(height: 16),
                         TabBar(
                             indicator: BoxDecoration(
                                 color: ColorConstant.containerColor, borderRadius: BorderRadius.circular(10)),
@@ -79,7 +79,7 @@ class _FilterScreenState extends State<FilterScreen> {
                       ],
                     ),
                   ),
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Container(
                     height: 380,
                     decoration: BoxDecoration(
@@ -90,7 +90,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           Column(
                             children: [
                               Container(
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(width: 1,color: ColorConstant.gray)
@@ -103,21 +103,21 @@ class _FilterScreenState extends State<FilterScreen> {
                                             style: TextStyles.regularText(
                                                 fontWeight: FontWeight.w500
                                             )),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text('35km',
                                             style: TextStyles.regularText()
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 16),
+                                    const SizedBox(height: 16),
                                     Row(
                                       children: [
                                         Text('Max',
                                             style: TextStyles.regularText()
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Container(height: 48,width: 94,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               border: Border.all(width: 1,color: ColorConstant.gray)
@@ -130,7 +130,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 22),
+                                    const SizedBox(height: 22),
                                     Slider(
                                       value: _currentSliderValue1,
                                       max: 50,
@@ -146,9 +146,9 @@ class _FilterScreenState extends State<FilterScreen> {
                                   ],
                                 ),
                               ),
-                              SizedBox(height: 24),
+                              const SizedBox(height: 24),
                               Container(
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(width: 1,color: ColorConstant.gray)
@@ -159,21 +159,21 @@ class _FilterScreenState extends State<FilterScreen> {
                                       children: [
                                         Text(StringConstant.age,
                                             style: TextStyles.regularText(fontWeight: FontWeight.w500)),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text('21 - 37',
                                             style: TextStyles.regularText()
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 16),
+                                    const SizedBox(height: 16),
                                     Row(
                                       children: [
                                         Text('From',
                                             style: TextStyles.regularText()
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Container(width: 94,height: 48,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               border: Border.all(width: 1,color: ColorConstant.gray)
@@ -184,13 +184,13 @@ class _FilterScreenState extends State<FilterScreen> {
                                             ),
                                           ),
                                         ),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text('To',
                                             style: TextStyles.regularText()
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Container(width: 94,height: 48,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               border: Border.all(width: 1,color: ColorConstant.gray)
@@ -203,7 +203,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 22),
+                                    const SizedBox(height: 22),
                                     RangeSlider(
                                         values: values1,
                                         min: 0,
@@ -215,7 +215,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             values1.end.round().toString()
                                         ),
                                         onChanged: (values) => setState(() {
-                                          this.values1 = values;
+                                          values1 = values;
                                         }))
                                   ],
                                 ),
@@ -225,7 +225,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           Column(
                             children: [
                               Container(
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(width: 1,color: ColorConstant.gray)
@@ -238,21 +238,21 @@ class _FilterScreenState extends State<FilterScreen> {
                                             style: TextStyles.regularText(
                                                 fontWeight: FontWeight.w500
                                             )),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text('35km',
                                             style: TextStyles.regularText()
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 16),
+                                    const SizedBox(height: 16),
                                     Row(
                                       children: [
                                         Text('Max',
                                             style: TextStyles.regularText()
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Container(height: 48,width: 94,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               border: Border.all(width: 1,color: ColorConstant.gray)
@@ -265,7 +265,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 22),
+                                    const SizedBox(height: 22),
                                     Slider(
                                       value: _currentSliderValue2,
                                       max: 50,
@@ -281,9 +281,9 @@ class _FilterScreenState extends State<FilterScreen> {
                                   ],
                                 ),
                               ),
-                              SizedBox(height: 24),
+                              const SizedBox(height: 24),
                               Container(
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(width: 1,color: ColorConstant.gray)
@@ -294,21 +294,21 @@ class _FilterScreenState extends State<FilterScreen> {
                                       children: [
                                         Text(StringConstant.age,
                                             style: TextStyles.regularText(fontWeight: FontWeight.w500)),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text('21 - 37',
                                             style: TextStyles.regularText()
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 16),
+                                    const SizedBox(height: 16),
                                     Row(
                                       children: [
                                         Text('From',
                                             style: TextStyles.regularText()
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Container(width: 94,height: 48,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               border: Border.all(width: 1,color: ColorConstant.gray)
@@ -319,13 +319,13 @@ class _FilterScreenState extends State<FilterScreen> {
                                             ),
                                           ),
                                         ),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text('To',
                                             style: TextStyles.regularText()
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Container(width: 94,height: 48,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               border: Border.all(width: 1,color: ColorConstant.gray)
@@ -338,7 +338,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 22),
+                                    const SizedBox(height: 22),
                                     RangeSlider(
                                         values: values2,
                                         min: 0,
@@ -350,7 +350,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             values2.end.round().toString()
                                         ),
                                         onChanged: (values) => setState(() {
-                                          this.values2 = values;
+                                          values2 = values;
                                         }))
                                   ],
                                 ),
@@ -360,7 +360,7 @@ class _FilterScreenState extends State<FilterScreen> {
                           Column(
                             children: [
                               Container(
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(width: 1,color: ColorConstant.gray)
@@ -373,21 +373,21 @@ class _FilterScreenState extends State<FilterScreen> {
                                             style: TextStyles.regularText(
                                                 fontWeight: FontWeight.w500
                                             )),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text('35km',
                                             style: TextStyles.regularText()
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 16),
+                                    const SizedBox(height: 16),
                                     Row(
                                       children: [
                                         Text('Max',
                                             style: TextStyles.regularText()
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Container(height: 48,width: 94,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               border: Border.all(width: 1,color: ColorConstant.gray)
@@ -400,7 +400,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 22),
+                                    const SizedBox(height: 22),
                                     Slider(
                                       value: _currentSliderValue3,
                                       max: 50,
@@ -416,9 +416,9 @@ class _FilterScreenState extends State<FilterScreen> {
                                   ],
                                 ),
                               ),
-                              SizedBox(height: 24),
+                              const SizedBox(height: 24),
                               Container(
-                                padding: EdgeInsets.all(10),
+                                padding: const EdgeInsets.all(10),
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     border: Border.all(width: 1,color: ColorConstant.gray)
@@ -429,21 +429,21 @@ class _FilterScreenState extends State<FilterScreen> {
                                       children: [
                                         Text(StringConstant.age,
                                             style: TextStyles.regularText(fontWeight: FontWeight.w500)),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text('21 - 37',
                                             style: TextStyles.regularText()
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 16),
+                                    const SizedBox(height: 16),
                                     Row(
                                       children: [
                                         Text('From',
                                             style: TextStyles.regularText()
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Container(width: 94,height: 48,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               border: Border.all(width: 1,color: ColorConstant.gray)
@@ -454,13 +454,13 @@ class _FilterScreenState extends State<FilterScreen> {
                                             ),
                                           ),
                                         ),
-                                        Spacer(),
+                                        const Spacer(),
                                         Text('To',
                                             style: TextStyles.regularText()
                                         ),
-                                        SizedBox(width: 10),
+                                        const SizedBox(width: 10),
                                         Container(width: 94,height: 48,
-                                          padding: EdgeInsets.all(10),
+                                          padding: const EdgeInsets.all(10),
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(10),
                                               border: Border.all(width: 1,color: ColorConstant.gray)
@@ -473,7 +473,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                         )
                                       ],
                                     ),
-                                    SizedBox(height: 22),
+                                    const SizedBox(height: 22),
                                     RangeSlider(
                                         values: values3,
                                         min: 0,
@@ -485,7 +485,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                             values3.end.round().toString()
                                         ),
                                         onChanged: (values) => setState(() {
-                                          this.values3 = values;
+                                          values3 = values;
                                         }))
                                   ],
                                 ),
@@ -498,12 +498,17 @@ class _FilterScreenState extends State<FilterScreen> {
                   // SizedBox(height: 26),
                   // Text(StringConstant.hobbies,style: TextStyles.regularText()),
 
-                  SizedBox(height: 24),
+                  const SizedBox(height: 24),
                   Container(
-                    padding: EdgeInsets.all(15),
+                    padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                          colors: [
+                            ColorConstant.buttonColor1,
+                            ColorConstant.buttonColor2
+                          ]
+                      ),
                         borderRadius: BorderRadius.circular(30),
-                        color: ColorConstant.buttonColor
                     ),
                     child: Center(
                         child: Text(StringConstant.apply,
