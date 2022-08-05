@@ -57,8 +57,13 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                           padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                           height: 32,width: 152,
                           decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [
+                                  ColorConstant.backGroundColor1,
+                                  ColorConstant.backGroundColor2
+                                ]
+                            ),
                               borderRadius: BorderRadius.circular(10),
-                              color: ColorConstant.containerColor
                           ),
                           child: Row(
                             children: [
@@ -75,8 +80,13 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                           padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                           height: 32,width: 152,
                           decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [
+                                  ColorConstant.backGroundColor1,
+                                  ColorConstant.backGroundColor2
+                                ]
+                            ),
                               borderRadius: BorderRadius.circular(10),
-                              color: ColorConstant.containerColor
                           ),
                           child: Row(
                             children: [
@@ -99,8 +109,13 @@ class _AllAddHobbyScreenState extends State<AllAddHobbyScreen> {
                         padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                         height: 32,width: 145,
                         decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                              colors: [
+                                ColorConstant.backGroundColor1,
+                                ColorConstant.backGroundColor2
+                              ]
+                          ),
                             borderRadius: BorderRadius.circular(10),
-                            color: ColorConstant.containerColor
                         ),
                         child: Row(
                           children: [

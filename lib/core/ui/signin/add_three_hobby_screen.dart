@@ -55,8 +55,13 @@ class _AddThreeHobbyScreenState extends State<AddThreeHobbyScreen> {
                           padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                           height: 32,width: 152,
                           decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [
+                                  ColorConstant.backGroundColor1,
+                                  ColorConstant.backGroundColor2
+                                ]
+                            ),
                               borderRadius: BorderRadius.circular(10),
-                              color: ColorConstant.containerColor
                           ),
                           child: Text(StringConstant.badminton,style: TextStyles.tabTextFont),
                         ),
@@ -82,8 +87,13 @@ class _AddThreeHobbyScreenState extends State<AddThreeHobbyScreen> {
                           padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                           height: 32,width: 152,
                           decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [
+                                  ColorConstant.backGroundColor1,
+                                  ColorConstant.backGroundColor2
+                                ]
+                            ),
                               borderRadius: BorderRadius.circular(10),
-                              color: ColorConstant.containerColor
                           ),
                           child: Text(StringConstant.photography,style: TextStyles.tabTextFont),
                         ),
@@ -109,8 +119,13 @@ class _AddThreeHobbyScreenState extends State<AddThreeHobbyScreen> {
                           padding: const EdgeInsets.fromLTRB(9, 4, 10, 4),
                           height: 32,width: 152,
                           decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                                colors: [
+                                  ColorConstant.backGroundColor1,
+                                  ColorConstant.backGroundColor2
+                                ]
+                            ),
                               borderRadius: BorderRadius.circular(10),
-                              color: ColorConstant.containerColor
                           ),
                           child: Text(StringConstant.surfing,style: TextStyles.tabTextFont),
                         ),

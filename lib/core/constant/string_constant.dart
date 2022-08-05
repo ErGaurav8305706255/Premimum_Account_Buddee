@@ -114,7 +114,37 @@ class StringConstant{
   static String jeannyTime = "12:12 AM";
   static String harryTime = "12:10 AM";
   static String millieTime = "12:05 AM";
-
+  static String checkoutPlan = "CheckOut Plan";
+  static String getPremium = "Get premium";
+  static String chooseYourPlan = "Choose your plan";
+  static String premiumUpper = "PREMIUM";
+  static String goldUpper = "GOLDEN";
+  static String platinumUpper = "PLATINUM";
+  static String perMonth = "PER MONTH";
+  static String saveUpTo = "Save Up to 30%";
+  static String unlimitedLikes = "Unlimited likes";
+  static String unlimitedHobbiesListed = "Unlimited hobbies listed";
+  static String changeYour = "Change your location (view profiles in another city)";
+  static String seeProfiles = "See profiles that have ‘liked’ you";
+  static String seeIfYour = "See if your messages have been read";
+  static String choosePlan = "CHOOSE PLAN";
+  static String congratulations = "Congratulations!";
+  static String cancel = "Cancel!";
+  static String visaAvoInfinite = "VISA AVO INFINITE\n(••••1234)";
+  static String payGuacamole = "PAY GUACAMOLE S.R.O";
+  static String confirmWithSideButton = "Confirm with Side Button!";
+  static String unlimitedLike = "Unlimited likes";
+  static String unlimitedHobbiesList = "Unlimited Hobbies listed";
+  static String changeYourLocation = "Change Your Location (view\n profiles in another city)";
+  static String seeProfilesThatHave = "See profiles that have 'liked' you";
+  static String seeIfYourMessagesHaveBeenRead = "See if your messages have\n been read";
+  static String yes = "Yes";
+  static String no = "No";
+  static String youAreNow = "You are now a premium\n account holder";
+  static String gotoBuddee = "GO TO BUDDEE";
+  static String cancl = "Cancle";
+  static String visaAvoInf = "VISA AVO INFINITE\n(••••1234)";
+  static String confirmWith = "Confirm with Side Button";
 
 
 

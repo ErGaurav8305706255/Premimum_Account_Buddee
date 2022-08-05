@@ -98,7 +98,12 @@ class _SignUpAboutState extends State<SignUpAbout> {
                     child: TabBar(
                         indicator: BoxDecoration(
                           borderRadius: BorderRadius.circular(10),
-                          color: ColorConstant.containerColor,
+                          gradient: LinearGradient(
+                              colors: [
+                                ColorConstant.backGroundColor1,
+                                ColorConstant.backGroundColor2
+                              ]
+                          ),
                         ),
                         indicatorColor: ColorConstant.transparent,
                         labelColor: ColorConstant.textColor,

@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'core/onBording/signin_intro_screen.dart';
 import 'core/onbording/bottom_navigation_bar_screen.dart';
 import 'core/onbording/profile_intro_screen.dart';
+import 'core/ui/checkout/choose_plan_screen.dart';
+import 'core/ui/checkout/congratulation_screen.dart';
+import 'core/ui/checkout/payment_screen.dart';
 import 'core/ui/explore/explore_screen.dart';
 import 'core/ui/explore/filter_screen.dart';
 import 'core/ui/profile/gallery_screen.dart';
@@ -93,6 +96,15 @@ class RouterApp{
       case Routes.bottomNavigatorBarScreen:
         return MaterialPageRoute(
             builder: (BuildContext context) => const BottomNavigatorBarScreen());
+      case Routes.choosePlanScreen:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const ChoosePlanScreen());
+      case Routes.paymentScreen:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const PaymentScreen());
+      case Routes.congratulationScreen:
+        return MaterialPageRoute(
+            builder: (BuildContext context) => const CongratulationScreen());
 
 
       default:
@@ -129,6 +141,9 @@ class Routes {
   static const String exploreScreen = '/exploreScreen';
   static const String filterScreen = '/filterScreen';
   static const String bottomNavigatorBarScreen = '/bottomNavigatorBarScreen';
+  static const String choosePlanScreen = '/choosePlanScreen';
+  static const String paymentScreen = '/paymentScreen';
+  static const String congratulationScreen = '/congratulationScreen';
 
   static const String noInternetScreen = '/noInternetScreen';
 }

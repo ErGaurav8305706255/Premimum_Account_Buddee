@@ -46,6 +46,18 @@ class ImageConstant {
   static const String img8 = '$base/img8.png';
   static const String img9 = '$base/img9.png';
   static const String img10 = '$base/img10.png';
+  static const String rightSignSvg = '$base/rightsign.svg';
+  static const String paySvg = '$base/Pay.svg';
+  static const String pana = '$base/pana.png';
+  static const String panaSvg = '$base/pana.svg';
+  static const String cloudSvg = '$base/cloud.svg';
+  static const String cloud = '$base/cloud.png';
+  static const String premiumSvg = '$base/premium.svg';
+  static const String pay = '$base/Pay.png';
+  static const String visaSvg = '$base/visa.svg';
+  static const String forwardSvg = '$base/forIcon.svg';
+  static const String confirmSvg = '$base/Confirmicon.svg';
+
 
 
 

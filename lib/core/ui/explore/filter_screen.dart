@@ -30,7 +30,7 @@ class _FilterScreenState extends State<FilterScreen> {
         child: Scaffold(
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 18,vertical: 36),
+              padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 25),
               child: Column(crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
@@ -65,7 +65,13 @@ class _FilterScreenState extends State<FilterScreen> {
                         const SizedBox(height: 16),
                         TabBar(
                             indicator: BoxDecoration(
-                                color: ColorConstant.containerColor, borderRadius: BorderRadius.circular(10)),
+                                gradient: LinearGradient(
+                                    colors: [
+                                      ColorConstant.backGroundColor1,
+                                      ColorConstant.backGroundColor2
+                                    ]
+                                ),
+                                borderRadius: BorderRadius.circular(10)),
                             indicatorColor: ColorConstant.transparent,
                             labelColor: ColorConstant.buttonBorderColor,
                             labelStyle: TextStyles.regularText(fontWeight: FontWeight.w500),
@@ -134,7 +140,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     Slider(
                                       value: _currentSliderValue1,
                                       max: 50,
-                                      activeColor: ColorConstant.containerColor,
+                                      activeColor: ColorConstant.backGroundColor2,
                                       inactiveColor: ColorConstant.gray,
                                       label: _currentSliderValue1.round().toString(),
                                       onChanged: (double value) {
@@ -208,7 +214,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                         values: values1,
                                         min: 0,
                                         max: 50,
-                                        activeColor: ColorConstant.containerColor,
+                                        activeColor: ColorConstant.backGroundColor2,
                                         inactiveColor: ColorConstant.gray,
                                         labels: RangeLabels(
                                             values1.start.round().toString(),
@@ -269,7 +275,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     Slider(
                                       value: _currentSliderValue2,
                                       max: 50,
-                                      activeColor: ColorConstant.containerColor,
+                                      activeColor: ColorConstant.backGroundColor2,
                                       inactiveColor: ColorConstant.gray,
                                       label: _currentSliderValue2.round().toString(),
                                       onChanged: (double value) {
@@ -343,7 +349,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                         values: values2,
                                         min: 0,
                                         max: 50,
-                                        activeColor: ColorConstant.containerColor,
+                                        activeColor: ColorConstant.backGroundColor2,
                                         inactiveColor: ColorConstant.gray,
                                         labels: RangeLabels(
                                             values2.start.round().toString(),
@@ -404,7 +410,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                     Slider(
                                       value: _currentSliderValue3,
                                       max: 50,
-                                      activeColor: ColorConstant.containerColor,
+                                      activeColor: ColorConstant.backGroundColor2,
                                       inactiveColor: ColorConstant.gray,
                                       label: _currentSliderValue3.round().toString(),
                                       onChanged: (double value) {
@@ -478,7 +484,7 @@ class _FilterScreenState extends State<FilterScreen> {
                                         values: values3,
                                         min: 0,
                                         max: 50,
-                                        activeColor: ColorConstant.containerColor,
+                                        activeColor: ColorConstant.backGroundColor2,
                                         inactiveColor: ColorConstant.gray,
                                         labels: RangeLabels(
                                             values3.start.round().toString(),

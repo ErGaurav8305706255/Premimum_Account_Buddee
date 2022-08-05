@@ -45,7 +45,14 @@ class _ProfileMainScreenState extends State<ProfileMainScreen> {
               child: Container(
                 height: 600,
                 decoration: BoxDecoration(
-                    color: ColorConstant.containerColor
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                      colors: [
+                        ColorConstant.backGroundColor1,
+                        ColorConstant.backGroundColor2
+                      ],
+                  ),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 20),

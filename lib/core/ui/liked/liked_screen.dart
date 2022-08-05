@@ -118,8 +118,13 @@ class _LikedScreenState extends State<LikedScreen> {
                             child: Container(
                               height: 27,width: 80,
                               decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                    colors: [
+                                      ColorConstant.backGroundColor1,
+                                      ColorConstant.backGroundColor2
+                                    ]
+                                ),
                                 borderRadius: BorderRadius.circular(20),
-                                color: ColorConstant.backGroundColor
                               ),
                               child: Center(child: Text(data[index]['hobbies'],style: TextStyles.lightText(
                                 color: ColorConstant.buttonBorderColor

@@ -72,7 +72,12 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                         const SizedBox(height: 16),
                         TabBar(
                             indicator: BoxDecoration(
-                                color: ColorConstant.containerColor,
+                                gradient: LinearGradient(
+                                    colors: [
+                                      ColorConstant.backGroundColor1,
+                                      ColorConstant.backGroundColor2
+                                    ]
+                                ),
                                 borderRadius: BorderRadius.circular(10)),
                             indicatorColor: ColorConstant.transparent,
                             labelColor: ColorConstant.buttonBorderColor,
@@ -146,7 +151,7 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                                 Slider(
                                   value: _currentSliderValue1,
                                   max: 50,
-                                  activeColor: ColorConstant.containerColor,
+                                  activeColor: ColorConstant.backGroundColor2,
                                   inactiveColor: ColorConstant.gray,
                                   label:
                                       _currentSliderValue1.round().toString(),
@@ -227,7 +232,7 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                                     values: values1,
                                     min: 0,
                                     max: 50,
-                                    activeColor: ColorConstant.containerColor,
+                                    activeColor: ColorConstant.backGroundColor2,
                                     inactiveColor: ColorConstant.gray,
                                     labels: RangeLabels(
                                         values1.start.round().toString(),
@@ -289,7 +294,7 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                                 Slider(
                                   value: _currentSliderValue2,
                                   max: 50,
-                                  activeColor: ColorConstant.containerColor,
+                                  activeColor: ColorConstant.backGroundColor2,
                                   inactiveColor: ColorConstant.gray,
                                   label:
                                       _currentSliderValue2.round().toString(),
@@ -370,7 +375,7 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                                     values: values2,
                                     min: 0,
                                     max: 50,
-                                    activeColor: ColorConstant.containerColor,
+                                    activeColor: ColorConstant.backGroundColor2,
                                     inactiveColor: ColorConstant.gray,
                                     labels: RangeLabels(
                                         values2.start.round().toString(),
@@ -432,7 +437,7 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                                 Slider(
                                   value: _currentSliderValue3,
                                   max: 50,
-                                  activeColor: ColorConstant.containerColor,
+                                  activeColor: ColorConstant.backGroundColor2,
                                   inactiveColor: ColorConstant.gray,
                                   label:
                                       _currentSliderValue3.round().toString(),
@@ -513,7 +518,7 @@ class _SearchSettingScreenState extends State<SearchSettingScreen> {
                                     values: values3,
                                     min: 0,
                                     max: 50,
-                                    activeColor: ColorConstant.containerColor,
+                                    activeColor: ColorConstant.backGroundColor2,
                                     inactiveColor: ColorConstant.gray,
                                     labels: RangeLabels(
                                         values3.start.round().toString(),

@@ -94,8 +94,13 @@ class _InformationScreenState extends State<InformationScreen> {
                     ),
                     child: TabBar(
                         indicator: BoxDecoration(
+                          gradient: LinearGradient(
+                              colors: [
+                                ColorConstant.backGroundColor1,
+                                ColorConstant.backGroundColor2
+                              ]
+                          ),
                           borderRadius: BorderRadius.circular(10),
-                          color: ColorConstant.containerColor,
                         ),
                         indicatorColor: ColorConstant.transparent,
                         labelColor: ColorConstant.textColor,

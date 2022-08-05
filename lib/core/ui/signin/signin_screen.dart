@@ -239,7 +239,7 @@ class _SignInScreenState extends State<SignInScreen> {
                         Text(
                           StringConstant.signUp,
                           style: TextStyles.lightText(
-                              color: ColorConstant.containerColor,
+                              color: ColorConstant.signTextColor,
                               isUnderline: true),
                         )
                       ],

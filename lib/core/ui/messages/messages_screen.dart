@@ -131,8 +131,14 @@ class _MessagesScreenState extends State<MessagesScreen> {
                                 height: 24,
                                 width: 100,
                                 decoration: BoxDecoration(
+                                  gradient: LinearGradient(
+                                      colors: [
+                                        ColorConstant.backGroundColor1,
+                                        ColorConstant.backGroundColor2
+                                      ]
+                                  ),
                                     borderRadius: BorderRadius.circular(5),
-                                    color: ColorConstant.backGroundColor),
+                                    ),
                                 child: Center(
                                   child: Text(
                                     data[index]['hobbies'],

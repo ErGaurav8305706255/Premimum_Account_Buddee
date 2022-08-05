@@ -43,7 +43,12 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                     Container(
                         height: 32,width: 152,
                         decoration: BoxDecoration(
-                            color: ColorConstant.containerColor,
+                            gradient: LinearGradient(
+                                colors: [
+                                  ColorConstant.backGroundColor1,
+                                  ColorConstant.backGroundColor2
+                                ]
+                            ),
                             borderRadius: BorderRadius.circular(10)
                         ),
                         child: Center(child: Text(StringConstant.badminton,style: TextStyles.tabTextFont,))),
@@ -59,7 +64,12 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                     Container(
                         height: 32,width: 152,
                         decoration: BoxDecoration(
-                            color: ColorConstant.containerColor,
+                            gradient: LinearGradient(
+                                colors: [
+                                  ColorConstant.backGroundColor1,
+                                  ColorConstant.backGroundColor2
+                                ]
+                            ),
                             borderRadius: BorderRadius.circular(10)
                         ),
                         child: Center(child: Text(StringConstant.photography,
@@ -81,7 +91,12 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                     Container(
                         height: 32,width: 152,
                         decoration: BoxDecoration(
-                            color: ColorConstant.containerColor,
+                            gradient: LinearGradient(
+                                colors: [
+                                  ColorConstant.backGroundColor1,
+                                  ColorConstant.backGroundColor2
+                                ]
+                            ),
                             borderRadius: BorderRadius.circular(10)
                         ),
                         child: Center(child: Text(StringConstant.gallery,
@@ -110,7 +125,14 @@ class _ProfileIntroScreenState extends State<ProfileIntroScreen> {
                   padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 32),
                   height: 370,
                   decoration: BoxDecoration(
-                    color: ColorConstant.backGroundColor,
+                    gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          ColorConstant.backGroundColor1,
+                          ColorConstant.backGroundColor2
+                        ]
+                    ),
                   ),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

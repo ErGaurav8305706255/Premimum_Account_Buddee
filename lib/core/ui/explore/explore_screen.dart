@@ -58,7 +58,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
         child: Scaffold(
           body: SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.fromLTRB(24, 30, 24, 24),
+              padding: const EdgeInsets.fromLTRB(20, 25, 20, 25),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -167,7 +167,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                           style: TextStyles.regularText(
                               fontSize: 15,
                               fontWeight: FontWeight.w600,
-                              color: ColorConstant.backGroundColor
+                              color: ColorConstant.backGroundColor2
                           )),
                       Container(
                         height: 27,width: 95,
@@ -206,8 +206,13 @@ class _ExploreScreenState extends State<ExploreScreen> {
                               padding: const EdgeInsets.symmetric(horizontal: 15,vertical: 1),
                               margin: const EdgeInsets.all(5),
                               decoration: BoxDecoration(
+                                gradient: LinearGradient(
+                                    colors: [
+                                      ColorConstant.backGroundColor1,
+                                      ColorConstant.backGroundColor2
+                                    ]
+                                ),
                                   borderRadius: BorderRadius.circular(30),
-                                  color: ColorConstant.backGroundColor
                               ),
                               child: Center(child: Text(item[index]['title'],style: TextStyles.mediumText(
                                   color: ColorConstant.black
@@ -243,7 +248,7 @@ class _ExploreScreenState extends State<ExploreScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(items['title'],style: TextStyles.regularText(
-                                  color: ColorConstant.backGroundColor,
+                                  color: ColorConstant.backGroundColor2,
                                   fontWeight: FontWeight.w600
                               ),),
                               const SizedBox(height: 16),
@@ -331,7 +336,8 @@ class _ExploreScreenState extends State<ExploreScreen> {
         width: 8,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: currentIndex2 ? ColorConstant.backGroundColor : ColorConstant.lightIndicatorColor,
+          color: currentIndex2 ? ColorConstant.backGroundColor2
+              : ColorConstant.lightIndicatorColor,
         ),
       ),
     );
